@@ -1,0 +1,23 @@
+{
+  "title": "Schriftenverzeichnis: Publikationen von Ottmar Ette zu Alexander von Humboldt",
+  "upload_type": "dataset",
+  "creators": [
+    {
+      "name": "Kraft, Tobias",
+      "affiliation": "Berlin-Brandenburgische Akademie der Wissenschaften"
+    },
+    {
+      "name": "Päßler, Ulrich",
+      "affiliation": "Berlin-Brandenburgische Akademie der Wissenschaften"
+    }
+  ],
+  "description": "Bibliographischer Datensatz mit 262 Einträgen zu den Publikationen von Ottmar Ette über Alexander von Humboldt. Enthalten sind strukturierte Daten in JSON und CSV, Exporte in RIS und CSL-JSON, eine offlinefähige HTML-Webansicht mit Kategorien-, Sprach- und Jahresregistern sowie Dokumentation und Erzeugungsskripte. Daten und redaktionelle Inhalte stehen unter CC BY 4.0, der Programmcode unter MIT; die genaue Zuordnung erläutert LIZENZ.md.",
+  "access_right": "open",
+  "license": "cc-by-4.0",
+  "keywords": [
+    "Alexander von Humboldt",
+    "Ottmar Ette",
+    "Bibliographie",
+    "Digital Humanities"
+  ]
+}
