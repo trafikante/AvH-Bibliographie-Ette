@@ -11,3 +11,7 @@ Die Lizenz erfasst nicht die verlinkten Publikationen, Audio-/Videoaufnahmen ode
 Der projektspezifische Programmcode einschließlich Python-Skripten und HTML-/CSS-Oberflächencode steht unter der **MIT-Lizenz**. Der vollständige Lizenztext steht in [LICENSE](LICENSE). Damit ist die Weiterverwendung und Veränderung des Codes auch außerhalb dieses Projekts gestattet, unter Beibehaltung des Lizenz- und Urheberrechtshinweises.
 
 Die MIT-Lizenz ersetzt nicht CC BY 4.0 für die bibliographischen Inhalte und Daten. Für enthaltene oder verlinkte Inhalte Dritter gelten deren eigene Rechte.
+
+## GitHub-Logo
+
+Die eingebettete GitHub-Markierung stammt aus [GitHub Octicons](https://github.com/primer/octicons/blob/main/icons/mark-github-16.svg), Copyright (c) 2026 GitHub Inc., MIT-Lizenz. Der vollständige Lizenzhinweis ist in den SVG-Metadaten von `assets/mark-github.svg` enthalten und wird mit in die eigenständige HTML-Datei eingebettet. Die Markierung kennzeichnet den Repository-Link, keine Unterstützung des Projekts durch GitHub.

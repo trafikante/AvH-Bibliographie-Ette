@@ -24,17 +24,17 @@ Kategorien und Untergruppen führen zu den Einträgen; Sprach- und Jahresregiste
 - **Jahresregister:** maßgeblich sind das Erscheinungsjahr der Hauptausgabe beziehungsweise das Startjahr eines Portals.
 - **Weitere Ausgaben:** separates Register für Neuauflagen und digitale Ausgaben mit Rückverweis zum Haupteintrag.
 - **Textsuche:** Strg+F, auf dem Mac ⌘F. Die Register sind keine frei kombinierbaren dynamischen Filter.
-- Registerbereiche und Auswahlprinzipien lassen sich mit den aufklappbaren Überschriften öffnen. Eine mehrsprachige Benutzeroberfläche ist für die nächste Iteration vorgesehen.
+- Registerbereiche und der Reiter „Dokumentation“ lassen sich mit den aufklappbaren Überschriften öffnen. Die Dokumentation zeigt die Auswahlregeln gegliedert und verlinkt Prozessbeschreibung, Datenmodell und Repository. Eine mehrsprachige Benutzeroberfläche ist für die nächste Iteration vorgesehen.
 
 ## Downloads
 
 Jeder Eintrag bietet RIS und CSL-JSON für genau diesen Haupteintrag. Gruppenexporte stehen bei Kategorien, akademischen Untergruppen, Sprachen und Hauptjahren: insgesamt 56 Gruppen mit 112 Exportlinks. In Sprachgruppen ist die Reihenfolge chronologisch aufsteigend. Zusätzliche Auflagen werden nicht als eigenständige Datensätze in diese Exporte eingeschoben.
 
-Der Abschnitt „Gesamtdaten“ bietet alle Einträge als RIS, CSL-JSON, CSV und vollständigen JSON-Projektdatensatz. CSV ist UTF-8 mit BOM kodiert; auch die anderen Dateien verwenden UTF-8.
+Der Abschnitt „Datensets“ bietet alle Einträge als RIS, CSL-JSON, CSV und vollständigen JSON-Projektdatensatz. CSV ist UTF-8 mit BOM kodiert; auch die anderen Dateien verwenden UTF-8.
 
 ### Smartphone und direkte Dateilinks
 
-Zusätzlich zu den eingebetteten Downloads gibt es unter „Gesamtdaten“ **echte Dateilinks** und ein **ZIP-Paket** mit allen vier Gesamtformaten sowie dem Lizenzhinweis. Das umgeht die Abhängigkeit von eingebetteten Data-URL-Downloads. Ein mobiler Browser kann eine Datei anzeigen, statt sie sofort zu speichern; dann sein Teilen-/Speichermenü nutzen, auf dem iPhone etwa „In Dateien sichern“.
+Zusätzlich zu den eingebetteten Downloads gibt es unter „Datensets“ **echte Dateilinks** und ein **ZIP-Paket** mit allen vier Gesamtformaten sowie dem Lizenzhinweis. Das umgeht die Abhängigkeit von eingebetteten Data-URL-Downloads. Ein mobiler Browser kann eine Datei anzeigen, statt sie sofort zu speichern; dann sein Teilen-/Speichermenü nutzen, auf dem iPhone etwa „In Dateien sichern“.
 
 Diese Links funktionieren auf GitHub Pages oder zusammen mit den lokalen Ordnern `data` und `exports`. Beim alleinigen Kopieren von `index.html` bleiben die eingebetteten Downloads erhalten; die externen Dateilinks stehen dann nicht automatisch offline zur Verfügung. Einzel- und Gruppenexports bleiben eingebettete Downloads und können denselben mobilen Einschränkungen unterliegen.
 
@@ -54,7 +54,7 @@ Automatisch geprüft werden erhaltene Literaturangaben, interne Sprungziele, Exp
 
 ## Barrierefreiheit
 
-Die deutschsprachige HTML-Seite verwendet semantische Bereiche und Überschriften, einen Tastatur-Sprunglink zum Inhalt, sichtbare Fokusmarkierungen sowie aussagekräftige Namen der Exportlinks. Einzelne Einträge haben für Screenreader erreichbare Titelüberschriften; dekorative Icons bleiben verborgen. Vergrößerbare Schrift, angepasste Kontraste, größere Bedienelemente und eine schmale einspaltige Ansicht unterstützen Sehbehinderung und mobile Nutzung. Dies sind grundlegende Verbesserungen, keine behauptete vollständige WCAG-Konformität; ein Praxistest mit Screenreader steht noch aus.
+Die deutschsprachige HTML-Seite bleibt über semantische Bereiche, sichtbare Überschriften, normale Links und verständliche Exportbeschriftungen auslesbar. Zusätzlich eingefügte unsichtbare Titelüberschriften und besondere Bereichsmarkierungen wurden auf Wunsch des Bearbeiters entfernt; die normale Tastaturbedienung und browserseitige Fokusdarstellung bleiben erhalten. Vergrößerbare Schrift, größere Bedienelemente und eine einspaltige schmale Ansicht unterstützen die Nutzung. Dekorative Icons bleiben für Screenreader verborgen. Ein Praxistest mit Screenreader steht noch aus; eine vollständige WCAG-Konformität wird nicht behauptet.
 
 ## Lokale Neuerstellung
 

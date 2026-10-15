@@ -15,6 +15,8 @@
 
 ## Gültiger Publikationsstand vom 15.10.2026
 
+Weitere Oberflächenkorrektur: Reiter „Dokumentation“ mit gegliederten Auswahlregeln und direkten Links zur Prozessdokumentation, zum Datenmodell und Repository. Downloadbereich und Schnelllink heißen „Datensets“. Unsichtbare zusätzliche Eintragstitel und besondere Bereichsmarkierungen entfernt; semantisches HTML, lesbare Inhalte und normale Tastaturbedienung bleiben bestehen. Der Footer ist responsiv in drei Bereiche gegliedert und enthält eine inline eingebettete GitHub-Markierung mit Lizenznachweis. README-Korrekturhinweise verlinken die offizielle Anleitung zum Anlegen eines Issues. Bibliographische Datensätze und Tokenauswertung wurden nicht verändert.
+
 Die Bibliographie ist als eigenständige Datenpublikation freigegeben. Der Bearbeiter hat zahlreiche Einträge kontrolliert und RIS-Importe in Citavi und Zotero erprobt; eine lückenlose Einzelkontrolle aller Metadaten wird nicht behauptet. Alle 262 Datensätze tragen nun `review_status: reviewed`, die Publikationsfreigabe und ihre Grundlage stehen zusätzlich in den Datensatzmetadaten. Bibliographische Angaben und IDs wurden dabei nicht verändert.
 
 Die RIS-Ausgabe wurde auf genau ein mehrzeiliges `N1`-Feld pro Datensatz umgestellt: Hinweis „Vollständige Literaturangabe:“ vor dem Originalnachweis. Ein Test mit dem offiziellen Zotero-RISReader bestätigte für alle 262 Datensätze genau ein entsprechendes Feld und die korrekte Reihenfolge. Das ist ein Parser-Test, kein erneuter Import in die vollständige Anwendung.

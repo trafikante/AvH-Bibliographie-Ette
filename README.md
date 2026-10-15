@@ -14,7 +14,7 @@ Die Webseite bietet Kategorien-, Sprach- und Jahresregister sowie Downloads als 
 
 RIS-Importe wurden vom Bearbeiter in **Zotero und Citavi** geprüft; bisher wurden abgesehen von der korrigierten Aufteilung des Originalnachweises auf zwei Notizen keine Fehler beobachtet. EndNote wurde nicht getestet. [Bedienung, mobile Downloads und Exporthinweise](WEB-NUTZUNG.md).
 
-Für Smartphones stehen [direkte Datendateien und ein ZIP-Paket](https://trafikante.github.io/AvH-Bibliographie-Ette/#downloads) bereit. Die Bibliographie ist als eigenständige Datenpublikation freigegeben. Korrekturhinweise sind über [GitHub Issues](https://github.com/trafikante/AvH-Bibliographie-Ette/issues) willkommen.
+Für Smartphones stehen [direkte Datendateien und ein ZIP-Paket](https://trafikante.github.io/AvH-Bibliographie-Ette/#downloads) bereit. Die Bibliographie ist als eigenständige Datenpublikation freigegeben. Korrekturhinweise sind willkommen; die [GitHub-Anleitung zum Anlegen eines Issues](https://docs.github.com/de/issues/tracking-your-work-with-issues/using-issues/creating-an-issue) erklärt das Vorgehen.
 
 ## Wie ist die Ressource entstanden?
 

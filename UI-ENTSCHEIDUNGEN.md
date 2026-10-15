@@ -2,6 +2,8 @@
 
 Stand 13.10.2026; vom Nutzer nach Prüfung der Erfassungsprobe festgelegt.
 
+Aktuelle Oberflächenfestlegung: „Dokumentation“ statt „Prinzipien zur Auswahl“, „Datensets“ statt „Gesamtdownloads“. Der Footer erhält drei responsive Bereiche und eine eingebettete GitHub-Markierung. Keine zusätzlichen unsichtbaren Eintragstitel und keine eigens hinzugefügten Bereichsmarkierungen; normale HTML-Semantik und browserseitige Tastaturfokusanzeige bleiben bestehen.
+
 Ergänzung 15.10.2026: Publikationsfreigabe, chronologisch aufsteigende Sprachregister, einheitliches RIS-Notizfeld und direkte Gesamtdateien mit ZIP-Fallback für mobile Browser. Grundlegende Barrierefreiheit: semantische Überschriften, benannte Exportlinks, Tastatursprung und Fokusmarkierung, vergrößerbare Schrift und schmale Ansicht. Datenlizenz CC BY 4.0, Softwarelizenz MIT. Nächste Iteration: mehrsprachige Benutzeroberfläche; in diesem Schritt noch keine Übersetzung.
 
 Weitere Nutzeranforderung umgesetzt: RIS-/CSL-JSON-Gruppenexports nach Kategorie, Sprache und Hauptjahr; zusätzlich nach akademischer Untergruppe. Direkt eingebettete Downloads, ohne JavaScript. Der Kopfbereich erhält stärkere visuelle Hierarchie und Schnelllinks, ohne den quellengetreuen Titel oder die Auswahlprinzipien zu verändern.
