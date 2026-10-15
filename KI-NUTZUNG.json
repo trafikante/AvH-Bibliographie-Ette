@@ -1,0 +1,96 @@
+{
+  "scope": "Recorded Codex session; separate subtotal for dataset and HTML project",
+  "source_session_id": "01a12b77-d517-7741-a387-fd80f9a06471",
+  "cutoff_exclusive_utc": "2026-10-15T11:39:50.084Z",
+  "last_included_usage_utc": "2026-10-15T11:37:49.655Z",
+  "dataset_html_request_utc": "2026-10-13T12:25:52.754Z",
+  "method": "Sum usage from token_usage_record, once per response_id; join model and reasoning effort by turn_id with turn_context. Cross-check sum against last included thread_token_usage. Do not add token_count events.",
+  "duplicate_response_ids": 0,
+  "thread_counter_crosscheck": true,
+  "all_recorded_work": {
+    "response_count": 364,
+    "models": {
+      "gpt-6-astra": {
+        "responses": 101,
+        "first_usage_utc": "2026-10-12T13:14:50.996Z",
+        "last_usage_utc": "2026-10-13T09:00:14.418Z",
+        "reasoning_efforts": [
+          "high",
+          "medium"
+        ],
+        "tokens": {
+          "input_tokens": 13110745,
+          "cached_input_tokens": 12427776,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 65546,
+          "reasoning_output_tokens": 15870,
+          "total_tokens": 13176291
+        }
+      },
+      "gpt-6.1-sol": {
+        "responses": 263,
+        "first_usage_utc": "2026-10-12T16:28:51.138Z",
+        "last_usage_utc": "2026-10-15T11:37:49.655Z",
+        "reasoning_efforts": [
+          "low",
+          "medium"
+        ],
+        "tokens": {
+          "input_tokens": 48210581,
+          "cached_input_tokens": 46269184,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 214213,
+          "reasoning_output_tokens": 58372,
+          "total_tokens": 48424794
+        }
+      }
+    },
+    "tokens": {
+      "input_tokens": 61321326,
+      "cached_input_tokens": 58696960,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 279759,
+      "reasoning_output_tokens": 74242,
+      "total_tokens": 61601085,
+      "uncached_input_tokens": 2624366
+    }
+  },
+  "dataset_html_and_followup_documentation": {
+    "response_count": 131,
+    "models": {
+      "gpt-6.1-sol": {
+        "responses": 131,
+        "first_usage_utc": "2026-10-13T12:26:13.836Z",
+        "last_usage_utc": "2026-10-15T11:37:49.655Z",
+        "reasoning_efforts": [
+          "low",
+          "medium"
+        ],
+        "tokens": {
+          "input_tokens": 22027071,
+          "cached_input_tokens": 20908288,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 130283,
+          "reasoning_output_tokens": 31490,
+          "total_tokens": 22157354
+        }
+      }
+    },
+    "tokens": {
+      "input_tokens": 22027071,
+      "cached_input_tokens": 20908288,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 130283,
+      "reasoning_output_tokens": 31490,
+      "total_tokens": 22157354,
+      "uncached_input_tokens": 1118783
+    }
+  },
+  "limitations": [
+    "Cutoff excludes the present process-documentation revision and token audit.",
+    "Does not establish usage in the referenced ChatGPT conversation, other sessions, hidden tool/service models, or any unrecorded requests.",
+    "Model identifiers and reasoning efforts are recorded configuration; backend snapshot identifiers are not established.",
+    "Cached input is a subset of input; reasoning output is a subset of output. Total equals input plus output.",
+    "No inference of Plus-quota consumption or monetary cost."
+  ]
+}
