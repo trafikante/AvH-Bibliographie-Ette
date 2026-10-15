@@ -181,6 +181,9 @@ def build_page(dataset):
     title = config['title']
     principles = config['selection_principles']
     repository = config['repository_url']
+    zenodo = config['zenodo']
+    doi_url = 'https://doi.org/' + zenodo['doi']
+    concept_doi_url = 'https://doi.org/' + zenodo['concept_doi']
     explanation = []
     rules = []
     for text in principles:
@@ -191,6 +194,7 @@ def build_page(dataset):
             explanation.append('<p>' + escape(text) + '</p>')
     documentation = '<h2>Grundlage und Auswahl</h2>' + ''.join(explanation) + '<dl class="selection-rules">' + ''.join(rules) + '</dl>'
     documentation += '<h2>Ausführliche Dokumentation</h2><p>Wie aus der Word-Bibliographie in Zusammenarbeit mit einem KI-Agenten diese Webseite und strukturierte Daten entstanden sind, beschreibt die <a href="' + escape(repository + '/blob/main/ERSTELLUNG-UND-NACHNUTZUNG.md') + '">Prozessdokumentation</a>. Das <a href="' + escape(repository + '/blob/main/DATENMODELL.md') + '">Datenmodell</a> erläutert die Erfassungsregeln. Dokumentation, Rohdatensatz und Programmcode sind im <a href="' + escape(repository) + '">GitHub-Repository</a> verfügbar.</p>'
+    documentation += '<h2>Zitieren und Archivierung</h2><p>Kraft, Tobias; Päßler, Ulrich (2026): <em>' + escape(title) + '</em>. Version ' + escape(zenodo['version']) + '. Zenodo. <a href="' + escape(doi_url) + '">' + escape(doi_url) + '</a>.</p><p>Diese DOI bezeichnet den archivierten Stand. Die laufende Webseite kann spätere Änderungen enthalten. Für die Ressource über alle Versionen hinweg steht die <a href="' + escape(concept_doi_url) + '">versionsübergreifende DOI</a> bereit. <a href="' + escape(repository + '/blob/main/CITATION.cff') + '">Maschinenlesbare Zitierangaben</a>.</p>'
     selection = '<details class="selection"><summary>Dokumentation</summary><div class="selection-content">' + documentation + '</div></details>'
     records = dataset['records']
     chronological_records = sorted(records, key=lambda record: (record['publication_year'], record['source_order']))
@@ -250,6 +254,7 @@ def build_page(dataset):
     header += '<p class="hint">Offline nutzbar, ohne JavaScript. Eingebettete Downloads können auf Smartphones eingeschränkt sein; dafür stehen im Abschnitt „Datensets“ direkte Dateilinks und ein ZIP-Paket bereit.</p></header>'
     footer_navigation = '<nav aria-label="Navigation im Seitenfuß"><h2>Bibliographie</h2><ul><li><a href="#seitenanfang">Zurück zur Navigation ↑</a></li><li><a href="#sprachregister">Sprachregister</a></li><li><a href="#jahresregister">Jahresregister</a></li><li><a href="#weitere-ausgaben">Weitere Ausgaben</a></li><li><a href="#downloads">Datensets</a></li></ul></nav>'
     footer_project = '<section><h2>Projekt und Dokumentation</h2><a class="github-link" href="' + escape(repository) + '">' + github_mark() + '<span>GitHub-Repository</span></a><ul><li><a href="' + escape(repository + '/blob/main/ERSTELLUNG-UND-NACHNUTZUNG.md') + '">Entstehung und Zusammenarbeit</a></li><li><a href="' + escape(repository + '/blob/main/DATENMODELL.md') + '">Datenmodell und Erfassungsregeln</a></li><li><a href="' + escape(repository + '/tree/main/data') + '">Rohdatensatz</a></li></ul></section>'
+    footer_project = footer_project.replace('</ul>', '<li><a href="' + escape(doi_url) + '">Zenodo: archivierte Version ' + escape(zenodo['version']) + '</a></li><li><a href="' + escape(repository + '/blob/main/CITATION.cff') + '">Zitierangaben</a></li></ul>')
     footer_license = '<section><h2>Lizenz und Nachnutzung</h2><p>Daten und redaktionelle Webinhalte: <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</p><p>Programmcode: <a href="' + escape(repository + '/blob/main/LICENSE') + '">MIT-Lizenz</a>. Verlinkte Inhalte Dritter behalten ihre eigenen Rechte.</p><p><a href="' + escape(repository + '/blob/main/LIZENZ.md') + '">Lizenz- und Bildnachweise</a></p></section>'
     footer = '<footer><div class="footer-grid">' + footer_navigation + footer_project + footer_license + '</div></footer>'
     direct_files = '<div class="direct-files"><h3>Dateien für Smartphone und Desktop</h3><p>Falls eingebettete Downloads nicht funktionieren: Datei öffnen und über das Browsermenü speichern oder teilen. Auf dem iPhone gegebenenfalls „In Dateien sichern“ wählen.</p><ul><li><a href="exports/bibliographie-downloads.zip" download>ZIP-Paket mit allen vier Gesamtformaten herunterladen</a></li><li><a href="exports/bibliographie.csl.json">CSL-JSON-Datei öffnen</a></li><li><a href="exports/bibliographie.ris">RIS-Datei öffnen</a></li><li><a href="data/bibliographie.csv">CSV-Datei öffnen</a></li><li><a href="data/bibliographie.json">JSON-Projektdatensatz öffnen</a></li></ul><p class="hint">Diese Dateilinks benötigen die veröffentlichte Webseite oder die zugehörigen lokalen Ordner. Die eingebetteten Downloads funktionieren auch in der allein gespeicherten HTML-Datei, soweit der Browser sie unterstützt.</p></div>'

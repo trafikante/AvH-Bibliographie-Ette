@@ -10,6 +10,7 @@
   - [4. Gesamterfassung mit fachlichen Rückkopplungen](#4-gesamterfassung-mit-fachlichen-rückkopplungen)
   - [5. Daten, Webseite und Exporte technisch erzeugen](#5-daten-webseite-und-exporte-technisch-erzeugen)
   - [6. Automatisch prüfen und manuell nachbessern](#6-automatisch-prüfen-und-manuell-nachbessern)
+- [Archivierung und Zitierbarkeit](#archivierung-und-zitierbarkeit)
 - [Modelle und dokumentierter Tokenumfang](#modelle-und-dokumentierter-tokenumfang)
 - [Was andere aus dem Vorgehen übernehmen können](#was-andere-aus-dem-vorgehen-übernehmen-können)
 
@@ -68,33 +69,41 @@ Der Agent implementierte Kontrollen für erhaltene Quellenabsätze, eindeutige I
 
 Der Bearbeiter hat die Datensätze geprüft und als eigenständige Datenpublikation freigegeben. RIS-Importe in Zotero und Citavi wurden erprobt; abgesehen von einer inzwischen korrigierten Notizaufteilung wurden bisher keine Fehler beobachtet. Der Originalnachweis wird nun mit dem vorangestellten Hinweis „Vollständige Literaturangabe:“ in einem einzigen RIS-Notizfeld ausgegeben. Die Tests sind keine behauptete Einzelkontrolle aller Metadaten oder aller Programme. Korrekturhinweise können als [GitHub Issue](https://github.com/trafikante/AvH-Bibliographie-Ette/issues) eingereicht werden.
 
+## Archivierung und Zitierbarkeit
+
+Der Bearbeiter veröffentlichte die Ressource auf GitHub und GitHub Pages und verband das Repository mit Zenodo. Ein GitHub-Release löst die Archivierung aus. Die Datei `.zenodo.json` legt dafür Titel, Ressourcentyp Dataset, die Bearbeiter Tobias Kraft und Ulrich Päßler mit ORCID/GND, Beschreibung und Lizenz fest. Der Agent bereitete diese Angaben vor und half bei der Fehleranalyse: Zwei fehlende Kommas verhinderten zunächst das Einlesen der Metadaten. Der syntaktisch korrigierte Stand wurde anschließend als `v1.0.2` erfolgreich archiviert.
+
+Der [Zenodo-Eintrag](https://doi.org/10.5281/zenodo.23400543) wurde über die öffentliche API kontrolliert: Version `v1.0.2`, Publikationsdatum 15.10.2026, Dataset, beide Bearbeiter samt Kennungen und CC BY 4.0. Die DOI `10.5281/zenodo.23400543` bezeichnet diese konkrete Fassung; `10.5281/zenodo.23400542` ist die versionsübergreifende DOI. Eine spätere Änderung im GitHub-Repository aktualisiert das archivierte Release nicht automatisch.
+
+README und HTML-Webansicht verweisen auf die archivierte Fassung. `CITATION.cff` stellt die Zitierangaben einschließlich ORCID für GitHubs Zitierfunktion bereit; GND-Kennungen stehen in `.zenodo.json`. Sind beide Dateien vorhanden, übernimmt Zenodo die Metadaten aus [`.zenodo.json`](https://help.zenodo.org/docs/github/describe-software/zenodo-json/). Für ein künftiges Release müssen Zitierangaben und Versionsbezüge erneut geprüft werden. Die hier ergänzten DOI-Hinweise und die folgende aktualisierte Tokenauswertung sind Nacharbeiten am laufenden Repository, noch keine nachträgliche Änderung des archivierten Releases.
+
 ## Modelle und dokumentierter Tokenumfang
 
 Ausgewertet wurden lokale Codex-Sitzungsprotokolle. Die folgenden Namen sind die **dort gespeicherten Modellkennungen**, keine nachträglich vermuteten Produktnamen. Ein genauerer Backend-Snapshot lässt sich daraus nicht bestimmen.
 
 | Modellkennung | Einsatz im protokollierten Verlauf | Protokollierte Reasoning-Einstellungen |
 |---|---|---|
-| `gpt-6-astra` | Redaktionelle Vorarbeiten an der Bibliographie | `high`, `medium` |
-| `gpt-6.1-sol` | Redaktionelle Arbeiten sowie Planung und Umsetzung von Datensatz, HTML und Dokumentation | `low`, `medium` |
+| `gpt-6-astra` | Redaktionelle Vorarbeiten sowie spätere Unterstützung der Zenodo-Veröffentlichung | `high`, `medium` |
+| `gpt-6.1-sol` | Redaktionelle Arbeiten sowie Planung und Umsetzung von Datensatz, HTML, Dokumentation und Veröffentlichung | `low`, `medium` |
 
-**Abgrenzung:** Die folgende Teilbilanz beginnt mit dem Auftrag zur bibliographischen Datenbank am **13.10.2026, 14:25:52 Uhr** und endet vor der jetzigen Überarbeitung der Prozessdokumentation am **15.10.2026, 13:39:50 Uhr**, jeweils Europe/Berlin. Sie umfasst auch nachfolgende Inhaltsergänzungen, Rückfragen und Dokumentationsarbeit, nicht nur den eigentlichen Konvertierungslauf. In diesem Abschnitt ist ausschließlich `gpt-6.1-sol` verzeichnet.
+**Abgrenzung:** Die folgende Teilbilanz beginnt mit dem Auftrag zur bibliographischen Datenbank am **13.10.2026, 14:25:52 Uhr** und erfasst die vor **15.10.2026, 18:16:09 Uhr** protokollierten Modellaufrufe, jeweils Europe/Berlin. Sie umfasst nachfolgende Inhaltsergänzungen, Rückfragen, Oberflächen- und Dokumentationsarbeit sowie die Unterstützung der GitHub-/Zenodo-Veröffentlichung. Ausgewertet wurden die ursprüngliche Sitzung, deren Fortsetzung in einem abgezweigten Chat und der gesonderte Zenodo-Troubleshoot-Chat. Die laufende DOI-/Dokumentationsüberarbeitung ist nur insoweit enthalten, wie Verbrauchswerte bereits vor diesem Stichtag aufgezeichnet waren; ihr Abschluss und die Schlussantwort sind nicht enthalten.
 
 | Tokenkategorie | Aufgezeichneter Umfang für dieses Teilprojekt |
 |---|---:|
-| Eingabe gesamt | 22.027.071 |
-| Davon aus dem Cache | 20.908.288 |
-| Eingabe ohne Cache | 1.118.783 |
-| Ausgabe gesamt | 130.283 |
-| Davon Reasoning-Ausgabe | 31.490 |
-| **Gesamt: Eingabe + Ausgabe** | **22.157.354** |
+| Eingabe gesamt | 48.243.255 |
+| Davon aus dem Cache | 46.431.232 |
+| Eingabe ohne Cache | 1.812.023 |
+| Ausgabe gesamt | 203.398 |
+| Davon Reasoning-Ausgabe | 55.523 |
+| **Gesamt: Eingabe + Ausgabe** | **48.446.653** |
 
-Die Teilbilanz beruht auf **131 Antwortdatensätzen**. Sie zählt verarbeitete Tokens über alle Modellaufrufe, nicht unterschiedliche Wörter oder die Länge des fertigen Produkts. Wiederholt mitgesendeter Gesprächskontext kann mehrfach als Eingabe erscheinen. Cache-Tokens sind bereits in der Eingabe enthalten, Reasoning-Tokens bereits in der Ausgabe; beide dürfen nicht nochmals zur Gesamtsumme addiert werden. Diese Teilmengenbeziehung beschreibt auch die [offizielle OpenAI-Dokumentation](https://developers.openai.com/api/docs/guides/agents-api/observability).
+Die Teilbilanz beruht auf **251 Antwortdatensätzen**: **3.875.641 Tokens** entfallen auf `gpt-6-astra`, **44.571.012** auf `gpt-6.1-sol`. Sie zählt verarbeitete Tokens über alle Modellaufrufe, nicht unterschiedliche Wörter oder die Länge des fertigen Produkts. Wiederholt mitgesendeter Gesprächskontext kann mehrfach als Eingabe erscheinen. Cache-Tokens sind bereits in der Eingabe enthalten, Reasoning-Tokens bereits in der Ausgabe; beide dürfen nicht nochmals zur Gesamtsumme addiert werden. Diese Teilmengenbeziehung beschreibt auch die [offizielle OpenAI-Dokumentation](https://developers.openai.com/api/docs/guides/agents-api/observability).
 
-Zum Vergleich: Für den gesamten lokal erfassten Verlauf einschließlich redaktioneller Vorarbeiten sind **61.601.085 Tokens** aufgezeichnet: **13.176.291** für `gpt-6-astra` und **48.424.794** für `gpt-6.1-sol`. Die Aufzeichnung mit Tokenangaben beginnt am 12.10.2026. Verbräuche eines zuvor referenzierten ChatGPT-Gesprächs, anderer Sitzungen oder nicht ausgewiesener Dienste sind damit nicht belegt.
+Zum Vergleich: Für den gesamten lokal erfassten Verlauf einschließlich redaktioneller Vorarbeiten sind über die drei ausgewerteten Sitzungen **87.890.384 Tokens** in **484 Antwortdatensätzen** aufgezeichnet: **17.051.932** für `gpt-6-astra` und **70.838.452** für `gpt-6.1-sol`. Die Aufzeichnung mit Tokenangaben beginnt am 12.10.2026. Verbräuche eines zuvor referenzierten ChatGPT-Gesprächs, weiterer Sitzungen oder nicht ausgewiesener Dienste sind damit nicht belegt; gesonderte automatische Sicherheitsprüfungen wurden nicht einbezogen.
 
-**Berechnung:** Je Antwort wurde `usage` aus `token_usage_record` einmal anhand der `response_id` berücksichtigt. Die Modellzuordnung erfolgte über `turn_id` und `turn_context`. Die Summe des vollständigen erfassten Verlaufs stimmt mit dem letzten einbezogenen `thread_token_usage` überein. Daneben auftretende `token_count`-Ereignisse wurden nicht hinzugerechnet. Die Zahlen sind somit protokollbasierte Messwerte mit festem Stichtag, keine Schätzung aus der Textlänge und keine Aussage über Geldkosten oder verbrauchtes Plus-Kontingent.
+**Berechnung:** Je Antwort wurde `usage` aus `token_usage_record` einmal anhand der `response_id` berücksichtigt, über alle drei ausgewerteten Sitzungen hinweg. Die Modellzuordnung erfolgte über `turn_id` und einen vollständigen Index der `turn_context`-Einträge. Die Fortsetzung übernimmt im kumulativen Zähler bereits **81.860.014 Tokens** aus der Ursprungssitzung; diese wurden nicht erneut addiert. Die Summe der Einzelverbräuche aus Ursprung und Fortsetzung stimmt mit deren letztem einbezogenen `thread_token_usage` überein; der gesonderte Troubleshoot-Chat steuert **33.881 Tokens** bei. Die frühere Bilanz von 61.601.085 Tokens zum alten Stichtag wurde zur Gegenprüfung exakt reproduziert. Daneben auftretende `token_count`-Ereignisse wurden nicht hinzugerechnet. Die Zahlen sind protokollbasierte Messwerte mit festem Stichtag, keine Schätzung aus der Textlänge und keine Aussage über Geldkosten oder verbrauchtes Plus-Kontingent.
 
-Die [maschinenlesbare Auswertung](KI-NUTZUNG.json) enthält Abgrenzung, Modellanteile und Rechenmethode, aber keine Gesprächsinhalte. Die jetzige Dokumentationsüberarbeitung und ihre Verbrauchsauswertung sind nicht in den eingefrorenen Summen enthalten.
+Die [maschinenlesbare Auswertung](KI-NUTZUNG.json) enthält die drei Sitzungskennungen, Abgrenzung, Modellanteile, Rechenmethode und Gegenprüfungen, aber keine Gesprächsinhalte. Die verwendete Erfassungsgrenze ist als UTC-Zeit gespeichert. Künftige Arbeiten, insbesondere die geplante Mehrsprachigkeit, erfordern eine neue Auswertung.
 
 ## Was andere aus dem Vorgehen übernehmen können
 

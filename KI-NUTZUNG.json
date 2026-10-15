@@ -1,94 +1,189 @@
 {
-  "scope": "Recorded Codex session; separate subtotal for dataset and HTML project",
+  "scope": "Recorded bibliography conversation, its continuation fork, and the dedicated Zenodo troubleshooting chat; separate subtotal for dataset, HTML, documentation and publication work",
   "source_session_id": "01a12b77-d517-7741-a387-fd80f9a06471",
-  "cutoff_exclusive_utc": "2026-10-15T11:39:50.084Z",
-  "last_included_usage_utc": "2026-10-15T11:37:49.655Z",
+  "source_sessions": [
+    {
+      "session_id": "01a12b77-d517-7741-a387-fd80f9a06471",
+      "forked_from_id": null,
+      "response_count": 446,
+      "first_usage_utc": "2026-10-12T13:14:50.996Z",
+      "last_usage_utc": "2026-10-15T15:43:28.298Z",
+      "tokens": {
+        "input_tokens": 81518325,
+        "cached_input_tokens": 78611968,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 341689,
+        "reasoning_output_tokens": 96468,
+        "total_tokens": 81860014
+      },
+      "inherited_counter_tokens_excluded": {
+        "input_tokens": 0,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 0,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 0
+      },
+      "counter_minus_inherited_matches_usage_sum": true
+    },
+    {
+      "session_id": "01a1403b-b285-7f61-9fa4-534f69726b37",
+      "forked_from_id": "01a12b77-d517-7741-a387-fd80f9a06471",
+      "response_count": 37,
+      "first_usage_utc": "2026-10-15T15:46:39.763Z",
+      "last_usage_utc": "2026-10-15T16:16:07.339Z",
+      "tokens": {
+        "input_tokens": 5985567,
+        "cached_input_tokens": 5585408,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 10922,
+        "reasoning_output_tokens": 1669,
+        "total_tokens": 5996489
+      },
+      "inherited_counter_tokens_excluded": {
+        "input_tokens": 81518325,
+        "cached_input_tokens": 78611968,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 341689,
+        "reasoning_output_tokens": 96468,
+        "total_tokens": 81860014
+      },
+      "counter_minus_inherited_matches_usage_sum": true
+    },
+    {
+      "session_id": "01a1403e-d971-7250-bf11-22ae388916cc",
+      "forked_from_id": null,
+      "response_count": 1,
+      "first_usage_utc": "2026-10-15T15:47:18.064Z",
+      "last_usage_utc": "2026-10-15T15:47:18.064Z",
+      "tokens": {
+        "input_tokens": 33618,
+        "cached_input_tokens": 22528,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 263,
+        "reasoning_output_tokens": 138,
+        "total_tokens": 33881
+      },
+      "inherited_counter_tokens_excluded": {
+        "input_tokens": 0,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 0,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 0
+      },
+      "counter_minus_inherited_matches_usage_sum": true
+    }
+  ],
+  "cutoff_exclusive_utc": "2026-10-15T16:16:09Z",
+  "last_included_usage_utc": "2026-10-15T16:16:07.339Z",
   "dataset_html_request_utc": "2026-10-13T12:25:52.754Z",
-  "method": "Sum usage from token_usage_record, once per response_id; join model and reasoning effort by turn_id with turn_context. Cross-check sum against last included thread_token_usage. Do not add token_count events.",
+  "method": "Sum usage from token_usage_record once per response_id across the explicitly listed sessions; join model and reasoning effort by turn_id with turn_context using the complete context index. Exclude inherited thread counters in forks. Do not add token_count events or guardian-review sessions.",
   "duplicate_response_ids": 0,
   "thread_counter_crosscheck": true,
+  "previous_snapshot_crosscheck": {
+    "cutoff_exclusive_utc": "2026-10-15T11:39:50.084Z",
+    "total_tokens": 61601085,
+    "matches_previous_published_snapshot": true
+  },
   "all_recorded_work": {
-    "response_count": 364,
+    "response_count": 484,
     "models": {
       "gpt-6-astra": {
-        "responses": 101,
+        "responses": 128,
         "first_usage_utc": "2026-10-12T13:14:50.996Z",
-        "last_usage_utc": "2026-10-13T09:00:14.418Z",
+        "last_usage_utc": "2026-10-15T16:08:36.056Z",
         "reasoning_efforts": [
           "high",
           "medium"
         ],
         "tokens": {
-          "input_tokens": 13110745,
-          "cached_input_tokens": 12427776,
+          "input_tokens": 16979523,
+          "cached_input_tokens": 16107264,
           "cache_write_input_tokens": 0,
-          "output_tokens": 65546,
-          "reasoning_output_tokens": 15870,
-          "total_tokens": 13176291
+          "output_tokens": 72409,
+          "reasoning_output_tokens": 16626,
+          "total_tokens": 17051932
         }
       },
       "gpt-6.1-sol": {
-        "responses": 263,
+        "responses": 356,
         "first_usage_utc": "2026-10-12T16:28:51.138Z",
-        "last_usage_utc": "2026-10-15T11:37:49.655Z",
+        "last_usage_utc": "2026-10-15T16:16:07.339Z",
         "reasoning_efforts": [
           "low",
           "medium"
         ],
         "tokens": {
-          "input_tokens": 48210581,
-          "cached_input_tokens": 46269184,
+          "input_tokens": 70557987,
+          "cached_input_tokens": 68112640,
           "cache_write_input_tokens": 0,
-          "output_tokens": 214213,
-          "reasoning_output_tokens": 58372,
-          "total_tokens": 48424794
+          "output_tokens": 280465,
+          "reasoning_output_tokens": 81649,
+          "total_tokens": 70838452
         }
       }
     },
     "tokens": {
-      "input_tokens": 61321326,
-      "cached_input_tokens": 58696960,
+      "input_tokens": 87537510,
+      "cached_input_tokens": 84219904,
       "cache_write_input_tokens": 0,
-      "output_tokens": 279759,
-      "reasoning_output_tokens": 74242,
-      "total_tokens": 61601085,
-      "uncached_input_tokens": 2624366
+      "output_tokens": 352874,
+      "reasoning_output_tokens": 98275,
+      "total_tokens": 87890384,
+      "uncached_input_tokens": 3317606
     }
   },
   "dataset_html_and_followup_documentation": {
-    "response_count": 131,
+    "response_count": 251,
     "models": {
+      "gpt-6-astra": {
+        "responses": 27,
+        "first_usage_utc": "2026-10-15T15:46:39.763Z",
+        "last_usage_utc": "2026-10-15T16:08:36.056Z",
+        "reasoning_efforts": [
+          "high"
+        ],
+        "tokens": {
+          "input_tokens": 3868778,
+          "cached_input_tokens": 3679488,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 6863,
+          "reasoning_output_tokens": 756,
+          "total_tokens": 3875641
+        }
+      },
       "gpt-6.1-sol": {
-        "responses": 131,
+        "responses": 224,
         "first_usage_utc": "2026-10-13T12:26:13.836Z",
-        "last_usage_utc": "2026-10-15T11:37:49.655Z",
+        "last_usage_utc": "2026-10-15T16:16:07.339Z",
         "reasoning_efforts": [
           "low",
           "medium"
         ],
         "tokens": {
-          "input_tokens": 22027071,
-          "cached_input_tokens": 20908288,
+          "input_tokens": 44374477,
+          "cached_input_tokens": 42751744,
           "cache_write_input_tokens": 0,
-          "output_tokens": 130283,
-          "reasoning_output_tokens": 31490,
-          "total_tokens": 22157354
+          "output_tokens": 196535,
+          "reasoning_output_tokens": 54767,
+          "total_tokens": 44571012
         }
       }
     },
     "tokens": {
-      "input_tokens": 22027071,
-      "cached_input_tokens": 20908288,
+      "input_tokens": 48243255,
+      "cached_input_tokens": 46431232,
       "cache_write_input_tokens": 0,
-      "output_tokens": 130283,
-      "reasoning_output_tokens": 31490,
-      "total_tokens": 22157354,
-      "uncached_input_tokens": 1118783
+      "output_tokens": 203398,
+      "reasoning_output_tokens": 55523,
+      "total_tokens": 48446653,
+      "uncached_input_tokens": 1812023
     }
   },
   "limitations": [
-    "Cutoff excludes the present process-documentation revision and token audit.",
-    "Does not establish usage in the referenced ChatGPT conversation, other sessions, hidden tool/service models, or any unrecorded requests.",
+    "Snapshot includes only usage records written before the cutoff. The ongoing DOI/documentation update is only included to the extent already recorded; its completion and final answer are excluded.",
+    "Does not establish usage in the referenced ChatGPT conversation, other unlisted sessions, guardian-review models, hidden tool/service models, or unrecorded requests.",
     "Model identifiers and reasoning efforts are recorded configuration; backend snapshot identifiers are not established.",
     "Cached input is a subset of input; reasoning output is a subset of output. Total equals input plus output.",
     "No inference of Plus-quota consumption or monetary cost."

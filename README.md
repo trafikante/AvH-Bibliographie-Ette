@@ -16,6 +16,12 @@ RIS-Importe wurden vom Bearbeiter in **Zotero und Citavi** geprüft; bisher wurd
 
 Für Smartphones stehen [direkte Datendateien und ein ZIP-Paket](https://trafikante.github.io/AvH-Bibliographie-Ette/#downloads) bereit. Die Bibliographie ist als eigenständige Datenpublikation freigegeben. Korrekturhinweise sind willkommen; die [GitHub-Anleitung zum Anlegen eines Issues](https://docs.github.com/de/issues/tracking-your-work-with-issues/using-issues/creating-an-issue) erklärt das Vorgehen.
 
+## Zitieren und archivierte Fassung
+
+Kraft, Tobias; Päßler, Ulrich (2026): *Schriftenverzeichnis: Publikationen von Ottmar Ette zu Alexander von Humboldt*. Version v1.0.2. Zenodo. [https://doi.org/10.5281/zenodo.23400543](https://doi.org/10.5281/zenodo.23400543).
+
+Die Versions-DOI bezeichnet den am 15.10.2026 archivierten Stand. Die laufende Webseite und das Repository können spätere Änderungen enthalten. Für die Ressource über alle Versionen hinweg steht die [versionsübergreifende DOI](https://doi.org/10.5281/zenodo.23400542) bereit. Maschinenlesbare Zitierangaben: [CITATION.cff](CITATION.cff).
+
 ## Wie ist die Ressource entstanden?
 
 Die Ressource entstand in einer schrittweisen Zusammenarbeit zwischen dem fachlich verantwortlichen Bearbeiter und einem KI-Agenten in Codex Desktop: Regeln vereinbaren, eine Probe prüfen, die Word-Vorlage mit Python erschließen, fachliche Zweifelsfälle entscheiden und Daten, HTML sowie Exporte kontrollieren. Vollständige Literaturangaben, Kursivierungen und Links blieben erhalten.
