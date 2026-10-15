@@ -1,46 +1,67 @@
-# Offline-Webseite und Exporte
+# Webseite und Datenexporte
+
+## Inhalt
+
+- [Öffnen](#öffnen)
+- [Navigation](#navigation)
+- [Downloads](#downloads)
+  - [Smartphone und direkte Dateilinks](#smartphone-und-direkte-dateilinks)
+  - [Formate und Notizen](#formate-und-notizen)
+- [Prüfung und beobachtete Browserunterschiede](#prüfung-und-beobachtete-browserunterschiede)
+- [Barrierefreiheit](#barrierefreiheit)
+- [Lokale Neuerstellung](#lokale-neuerstellung)
+- [Lizenz](#lizenz)
 
 ## Öffnen
 
-`index.html` mit einem aktuellen Browser öffnen. Die Datei enthält sämtliche 262 Einträge, die Gestaltung und die Downloadinhalte. Sie kann allein kopiert oder auf Zenodo bereitgestellt werden; kein Server, keine Installation, keine JavaScript-Ausführung und keine Internetverbindung zum Lesen nötig. Nur die externen Publikations-/Medienlinks und die Lizenzseite benötigen Internet.
-
-Die vorhandene `probe.html` bleibt unveränderte historische Erfassungsprobe. Maßgeblich für die neue Gesamtansicht ist `index.html`.
+Die [veröffentlichte Bibliographie](https://trafikante.github.io/AvH-Bibliographie-Ette/) ist eine eigenständige Datenpublikation mit 262 Einträgen. Die HTML-Datei `index.html` enthält sämtliche Einträge, die Gestaltung und eingebettete Exportdaten. Sie lässt sich auch einzeln offline öffnen. Externe Publikationen, GitHub-Links und separat bereitgestellte Online-Dateien benötigen Internet.
 
 ## Navigation
 
-Der vollständige Titel folgt dem Titel der Word-Datei. Der aufklappbare Reiter „Prinzipien zur Auswahl“ im Seitenkopf enthält die Auswahlgrundsätze ohne Kategorienaufzählung. „Zurück zur Navigation“ springt jetzt über `#seitenanfang` an den Dokumentanfang, statt die sticky Seitenleiste als Sprungziel zu verwenden. Der Hinweis auf die parallele Veröffentlichung in HiN im Dezember 2026 folgt der redaktionellen Nutzerangabe und verlinkt die Zeitschriftenhomepage.
+Kategorien und Untergruppen führen zu den Einträgen; Sprach- und Jahresregister erschließen die Titel. „Zurück zur Navigation“ springt an den Seitenanfang.
 
-- Kategorien und die fünf Untergruppen von „Akademische Publikationen“ führen direkt zu den Einträgen.
-- Sprach- und Jahreslinks führen zu aufklappbaren Titelregistern. Dort den jeweiligen Registerbereich öffnen und einen Titel auswählen. Mehrsprachige Publikationen stehen in mehreren Sprachregistern.
-- Das Jahresregister zeigt das Hauptjahr bzw. das Startjahr von Portalen. „Weitere Ausgaben“ erschließt zusätzliche Auflagen und digitale Ausgaben gesondert.
-- Jeder Eintrag bietet „Zurück zur Navigation“. Ein angesprungener Eintrag wird hervorgehoben.
-- Volltextsuche: Strg+F, unter macOS ⌘F. Die Register sind keine frei kombinierbaren dynamischen Filter; alle bibliographischen Einträge bleiben im Dokument vorhanden.
-- Druckansicht blendet Navigation und Exportaktionen aus. Kleine flache SVG-Symbole sind eingebettet, dekorativ und für Screenreader verborgen. Bedienung per Tastatur und responsive Gestaltung sind im HTML/CSS vorgesehen.
+- **Sprachregister:** Einträge chronologisch aufsteigend, ältere zuerst. Mehrsprachige Publikationen erscheinen in jeder zutreffenden Sprache.
+- **Jahresregister:** maßgeblich sind das Erscheinungsjahr der Hauptausgabe beziehungsweise das Startjahr eines Portals.
+- **Weitere Ausgaben:** separates Register für Neuauflagen und digitale Ausgaben mit Rückverweis zum Haupteintrag.
+- **Textsuche:** Strg+F, auf dem Mac ⌘F. Die Register sind keine frei kombinierbaren dynamischen Filter.
+- Registerbereiche und Auswahlprinzipien lassen sich mit den aufklappbaren Überschriften öffnen. Eine mehrsprachige Benutzeroberfläche ist für die nächste Iteration vorgesehen.
 
 ## Downloads
 
-Gruppen-Downloads: Jede der sieben Kategorien, jede der fünf akademischen Untergruppen, jede Sprache und jedes Hauptjahr bietet eigene RIS-/CSL-JSON-Downloads. Kategorien-Downloads stehen unmittelbar unter der Abschnittsüberschrift; Sprach- und Jahresdownloads im geöffneten Registerbereich. Insgesamt 56 Gruppen mit 112 Exportlinks. Mehrsprachige Einträge gehören zu jeder zutreffenden Sprachgruppe; innerhalb einer Gruppe wird jeder Eintrag nur einmal exportiert. Jahresgruppen richten sich ausschließlich nach dem Hauptjahr, nicht nach zusätzlichen Auflagen. Alle Gruppen-Exportdaten sind direkt im HTML eingebettet und funktionieren ohne JavaScript oder weitere Dateien.
+Jeder Eintrag bietet RIS und CSL-JSON für genau diesen Haupteintrag. Gruppenexporte stehen bei Kategorien, akademischen Untergruppen, Sprachen und Hauptjahren: insgesamt 56 Gruppen mit 112 Exportlinks. In Sprachgruppen ist die Reihenfolge chronologisch aufsteigend. Zusätzliche Auflagen werden nicht als eigenständige Datensätze in diese Exporte eingeschoben.
 
-Der Kopfbereich wurde mit zurückhaltender grüner Farbfläche, deutlicherer typographischer Hierarchie, kompaktem Statusfeld und direkten Register-/Downloadlinks neu gestaltet. Word-Titel, Auswahlprinzipien und Veröffentlichungshinweis bleiben erhalten.
+Der Abschnitt „Gesamtdaten“ bietet alle Einträge als RIS, CSL-JSON, CSV und vollständigen JSON-Projektdatensatz. CSV ist UTF-8 mit BOM kodiert; auch die anderen Dateien verwenden UTF-8.
 
-Jeder Eintrag enthält zwei Downloadlinks für genau diesen Eintrag: RIS und CSL-JSON. Im Abschnitt „Gesamtdaten“ stehen alle Einträge als RIS, CSL-JSON, CSV sowie als vollständiger Projektdatensatz JSON zur Verfügung. Die Downloads sind UTF-8-kodiert in der HTML-Datei eingebettet; die CSV enthält eine UTF-8-BOM für Tabellenprogramme.
+### Smartphone und direkte Dateilinks
 
-Zusätzlich liegen Gesamt-RIS und Gesamt-CSL-JSON im Ordner `exports`, JSON/CSV im Ordner `data`. Diese Dateien sind als alternative Importwege nutzbar, falls ein Browser eingebettete Downloads einschränkt.
+Zusätzlich zu den eingebetteten Downloads gibt es unter „Gesamtdaten“ **echte Dateilinks** und ein **ZIP-Paket** mit allen vier Gesamtformaten sowie dem Lizenzhinweis. Das umgeht die Abhängigkeit von eingebetteten Data-URL-Downloads. Ein mobiler Browser kann eine Datei anzeigen, statt sie sofort zu speichern; dann sein Teilen-/Speichermenü nutzen, auf dem iPhone etwa „In Dateien sichern“.
 
-Die RIS-Abbildung orientiert sich an der [offiziellen Zotero-RIS-Implementierung](https://github.com/zotero/translators/blob/master/RIS.js): Hörbücher und Audiobeiträge als `SOUND`, Videos als `VIDEO`, Sammelbände einschließlich Zeitschriftendossiers als `BOOK`. Die unterschiedlichen Importrollen der Medienformate erlauben keine pauschale Gleichsetzung von Autor, Regisseur und Komponist; die bibliographisch benannten Personen stehen bei Medien deshalb mit ihren Rollen in Notizen. Übersetzungs-/Sprecherrollen, besondere Paginierungen und vollständige Literaturangaben bleiben dort ebenfalls erhalten. Dies ist eine dokumentierte Austauschabbildung, keine Zusage identischer Darstellung in allen Literaturverwaltungen.
+Diese Links funktionieren auf GitHub Pages oder zusammen mit den lokalen Ordnern `data` und `exports`. Beim alleinigen Kopieren von `index.html` bleiben die eingebetteten Downloads erhalten; die externen Dateilinks stehen dann nicht automatisch offline zur Verfügung. Einzel- und Gruppenexports bleiben eingebettete Downloads und können denselben mobilen Einschränkungen unterliegen.
 
-CSL-JSON enthält die strukturierten bibliographischen Felder und zur Bewahrung zusätzlicher Angaben die vollständige Literaturangabe als `note`. Die eigenen Kategorie-, Sprach- und Quellenfelder bleiben im Projektdatensatz; CSL-JSON ersetzt ihn nicht. Einzel-Exporte enthalten den jeweiligen Haupteintrag, keine zusätzlich selbständig angelegten Neuauflagen.
+### Formate und Notizen
 
-## Prüfung und Grenzen
+Der Projektdatensatz bewahrt Kategorien, Sprachzuordnungen und Quellenbezüge. CSL-JSON bildet die bibliographischen Standardfelder ab und enthält den vollständigen Nachweis als `note`.
 
-Automatisch geprüft: 262 quellentreu dargestellte Einträge, 524 Einzel-Exporte, vier Gesamt-Exporte, dekodierbare Downloadinhalte, eindeutige Sprungmarken und gültige interne Links. Keine Skripte oder extern geladenen Gestaltungsmittel. Neuaufbau und gespeicherte Ergebnisse werden mit `scripts/build_site.py --check` verglichen.
+RIS bildet Hörbücher und Audiobeiträge als `SOUND`, Videos als `VIDEO`, Sammelbände einschließlich Zeitschriftendossiers als `BOOK` ab. Zusätzliche Personenrollen und komplexe Angaben bleiben bei Bedarf in der Notiz erhalten. Der Originalnachweis wird in **einem einzigen RIS-Notizfeld** ausgegeben: zuerst „Vollständige Literaturangabe:“, danach der ursprüngliche Volltext und gegebenenfalls weitere Erläuterungen. Frühere Exporte mit zwei getrennten Notizen werden dadurch nicht nachträglich in einer Literaturverwaltung geändert.
 
-Die Browserautomatisierung erlaubt hier keine `file:`-Navigation. Daher wurden weder visuelle Browserdarstellung noch tatsächliches Speichern über die Downloadlinks in dieser Umgebung bestätigt. Bitte beim ersten manuellen Öffnen insbesondere ein RIS- und ein CSL-JSON-Download sowie die schmale/mobile Darstellung prüfen. Ein praktischer Import in Zotero, EndNote oder Citavi steht noch aus; diese Programme müssen Medienrollen gegebenenfalls unterschiedlich zuordnen.
+## Prüfung und beobachtete Browserunterschiede
 
-Der lokale Prüfer ist kein vollständiger W3C-HTML-Validator. Er prüft die projektrelevante Struktur und die eingebetteten Inhalte. Der bibliographische Datensatz bleibt fachlich als Entwurf gekennzeichnet, ohne interne Erfassungsentscheidungen in den Einzeltiteln anzuzeigen.
+Der Bearbeiter hat zahlreiche Datensätze kontrolliert und die Bibliographie zur Publikation freigegeben. RIS-Importe in **Citavi und Zotero** wurden geprüft; bisher wurden abgesehen von der jetzt korrigierten Aufteilung des Originalnachweises in zwei Notizen keine Fehler beobachtet. EndNote wurde nicht getestet. Die neu erzeugten RIS-Dateien sollten zur Bestätigung der Notizdarstellung nochmals importiert werden.
 
-## Lokale Erstellung
+Die eingebetteten Gesamtdownloads funktionierten in den Tests des Bearbeiters in **Chrome auf dem Laptop**. Auf dem **iPhone mit aktuellem iOS und der Firefox-App** funktionierten sie dagegen nicht. Die ergänzten direkten Dateien und das ZIP-Paket sind ein alternativer Downloadweg; ihre tatsächliche Bedienung auf diesem iPhone muss nach Veröffentlichung nochmals geprüft werden. Eine erfolgreiche lokale Struktur-/Dateiprüfung ersetzt diesen Gerätetest nicht.
 
-Die Erstellungsreihenfolge ist: aktuelle Word-Quelle mit `scripts/migrate_v2.py` erfassen und prüfen, danach `scripts/build_site.py` ausführen. Die Word-Datei wird nicht verändert. Python wird nur zur Neuerstellung gebraucht, nicht zum Öffnen der Webseite. Es werden keine Git-Operationen, Netzwerkzugriffe oder Veröffentlichungen ausgeführt.
+Automatisch geprüft werden erhaltene Literaturangaben, interne Sprungziele, Exportinhalte, chronologische Sprachregister und das ZIP-Paket. Die direkten Dateilinks wurden lokal über HTTP geprüft und das ZIP im lokalen Browser erfolgreich heruntergeladen. Der offizielle Zotero-RISReader hat bei allen 262 Einträgen ein einziges Notizfeld mit der gewünschten Reihenfolge erkannt. Das ist ein Parser-Test, kein erneuter Import in die vollständige Zotero-Anwendung. Korrekturhinweise sind über [GitHub Issues](https://github.com/trafikante/AvH-Bibliographie-Ette/issues) willkommen.
 
-Lizenz: CC BY 4.0 für Daten und projektspezifische Webinhalte; keine Lizenzübertragung für verlinkte Inhalte Dritter. Genauer Umfang in `LIZENZ.md`.
+## Barrierefreiheit
+
+Die deutschsprachige HTML-Seite verwendet semantische Bereiche und Überschriften, einen Tastatur-Sprunglink zum Inhalt, sichtbare Fokusmarkierungen sowie aussagekräftige Namen der Exportlinks. Einzelne Einträge haben für Screenreader erreichbare Titelüberschriften; dekorative Icons bleiben verborgen. Vergrößerbare Schrift, angepasste Kontraste, größere Bedienelemente und eine schmale einspaltige Ansicht unterstützen Sehbehinderung und mobile Nutzung. Dies sind grundlegende Verbesserungen, keine behauptete vollständige WCAG-Konformität; ein Praxistest mit Screenreader steht noch aus.
+
+## Lokale Neuerstellung
+
+Die veröffentlichte HTML-Datei enthält Titel und Auswahlprinzipien bereits fest. Für die Neuerstellung liest `scripts/build_site.py` diese Angaben aus `data/web-konfiguration.json` sowie Daten aus JSON und CSV. Die Word-Datei ist dafür nicht mehr erforderlich.
+
+Bei vorhandener Python-Installation mit `lxml` erzeugt `py scripts/build_site.py` HTML, Gesamtexporte und ZIP neu; `py scripts/build_site.py --check` prüft die gespeicherten Ergebnisse. Zum bloßen Lesen und Herunterladen ist Python nicht nötig. Die Word-Erfassung ist ein davon getrennter, projektspezifischer Arbeitsschritt; siehe [Prozessdokumentation](ERSTELLUNG-UND-NACHNUTZUNG.md).
+
+## Lizenz
+
+Daten und redaktionelle Webinhalte: CC BY 4.0. Programmcode: [MIT](LICENSE). Verlinkte Inhalte Dritter sind davon nicht erfasst; siehe [LIZENZ.md](LIZENZ.md).

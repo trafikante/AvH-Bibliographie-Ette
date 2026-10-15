@@ -12,7 +12,9 @@ Die Webseite bietet Kategorien-, Sprach- und Jahresregister sowie Downloads als 
 - [CSV-Tabelle](data/bibliographie.csv): tabellarische Ansicht.
 - [CSL-JSON](exports/bibliographie.csl.json) und [RIS](exports/bibliographie.ris): Austauschformate für Literaturverwaltung.
 
-Mehr zur Bedienung und zu den Exportgrenzen: [Webansicht und Downloads](WEB-NUTZUNG.md). Praktische Importe in Zotero, EndNote oder Citavi sind noch nicht geprüft.
+RIS-Importe wurden vom Bearbeiter in **Zotero und Citavi** geprüft; bisher wurden abgesehen von der korrigierten Aufteilung des Originalnachweises auf zwei Notizen keine Fehler beobachtet. EndNote wurde nicht getestet. [Bedienung, mobile Downloads und Exporthinweise](WEB-NUTZUNG.md).
+
+Für Smartphones stehen [direkte Datendateien und ein ZIP-Paket](https://trafikante.github.io/AvH-Bibliographie-Ette/#downloads) bereit. Die Bibliographie ist als eigenständige Datenpublikation freigegeben. Korrekturhinweise sind über [GitHub Issues](https://github.com/trafikante/AvH-Bibliographie-Ette/issues) willkommen.
 
 ## Wie ist die Ressource entstanden?
 
@@ -24,4 +26,4 @@ Die Prozessdokumentation erläutert die Arbeitsteilung, den Ablauf und übertrag
 
 ## Lizenz
 
-Daten und projektspezifische Webinhalte: **[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)**. Verlinkte Publikationen und Medien Dritter sind davon nicht erfasst. Für den Programmcode ist bislang keine gesonderte Softwarelizenz festgelegt; siehe [Lizenzumfang](LIZENZ.md).
+Daten und redaktionelle Webinhalte: **[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)**. Programmcode: **[MIT](LICENSE)**. Verlinkte Publikationen und Medien Dritter sind davon nicht erfasst; siehe [Lizenzumfang](LIZENZ.md).

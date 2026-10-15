@@ -1,5 +1,14 @@
 # Medienergänzung unter „Debatten“
 
+## Inhalt
+
+- [Ergebnis](#ergebnis)
+- [Verifizierte eigenständige Mediennachweise](#verifizierte-eigenständige-mediennachweise)
+- [Ersatznachweise über die Hochschulübersicht](#ersatznachweise-über-die-hochschulübersicht)
+- [Präzisierungen und Auswahlentscheidungen](#präzisierungen-und-auswahlentscheidungen)
+- [Noch nicht aufgenommen: Humboldt-Thematik nicht hinreichend belegt](#noch-nicht-aufgenommen-humboldt-thematik-nicht-hinreichend-belegt)
+- [Sicherung und technische Kontrolle](#sicherung-und-technische-kontrolle)
+
 Recherche und Umsetzung: 13.10.2026. Quelle: [Ettes Video-/Audio-Publikationen](https://www.uni-potsdam.de/de/romanistik-ette/video-audio-publikationen). Bearbeitet wurde ausschließlich `bibliographie_ette_final_v2.docx`.
 
 ## Ergebnis

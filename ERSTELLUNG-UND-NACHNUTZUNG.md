@@ -1,6 +1,19 @@
 # Von der Word-Bibliographie zu Daten und HTML: Zusammenarbeit mit einem KI-Agenten
 
-Diese Dokumentation beschreibt das Vorgehen bei AvH-Bibliographie-Ette: Ein fachlich verantwortlicher Bearbeiter entwickelte gemeinsam mit einem KI-Agenten aus einer Word-Bibliographie eine strukturierte Datensammlung und eine offline nutzbare Webseite. Übertragbar ist die **Arbeitsweise**, nicht die unveränderte Ausführung aller projektspezifischen Skripte.
+## Inhalt
+
+- [Arbeitsteilung](#arbeitsteilung)
+- [Vorgehen in sechs Schritten](#vorgehen-in-sechs-schritten)
+  - [1. Erst prüfen, dann Regeln vereinbaren](#1-erst-prüfen-dann-regeln-vereinbaren)
+  - [2. Ziel und Datenmodell gemeinsam festlegen](#2-ziel-und-datenmodell-gemeinsam-festlegen)
+  - [3. Mit einer kleinen Probe beginnen](#3-mit-einer-kleinen-probe-beginnen)
+  - [4. Gesamterfassung mit fachlichen Rückkopplungen](#4-gesamterfassung-mit-fachlichen-rückkopplungen)
+  - [5. Daten, Webseite und Exporte technisch erzeugen](#5-daten-webseite-und-exporte-technisch-erzeugen)
+  - [6. Automatisch prüfen und manuell nachbessern](#6-automatisch-prüfen-und-manuell-nachbessern)
+- [Modelle und dokumentierter Tokenumfang](#modelle-und-dokumentierter-tokenumfang)
+- [Was andere aus dem Vorgehen übernehmen können](#was-andere-aus-dem-vorgehen-übernehmen-können)
+
+Diese Dokumentation beschreibt das Vorgehen bei AvH-Bibliographie-Ette: Ein fachlich verantwortlicher Bearbeiter (Tobias Kraft, BBAW) entwickelte gemeinsam mit einem KI-Agenten aus einer Word-Bibliographie eine strukturierte Datensammlung und eine offline nutzbare Webseite. Übertragbar ist die **Arbeitsweise**, nicht die unveränderte Ausführung aller projektspezifischen Skripte.
 
 ## Arbeitsteilung
 
@@ -45,15 +58,15 @@ Die Verarbeitung erfolgte mit Python, `python-docx` zum Lesen der DOCX sowie `lx
 - Der Wortlaut der Literaturangaben blieb gespeichert. Kursivierungen wurden in HTML als `<em>`, Hyperlinks als `<a>` erhalten; Text und Attribute wurden escaped.
 - Regeln erschlossen Titel, Personenrollen, Erscheinungsjahre, Seiten und Online-Verweise. Projektspezifische Sonderfälle wurden gesondert behandelt.
 - Der JSON-Projektdatensatz bewahrt Kategorien, Sprachen, Beziehungen und Quellenbezüge neben den bibliographischen Feldern. CSV bietet eine tabellarische Ansicht.
-- `scripts/build_site.py` erzeugt daraus die HTML-Ansicht und die Gesamtexporte als CSL-JSON und RIS. Für Titel und Auswahlprinzipien liest der Generator zusätzlich die passende Word-Quelle.
+- `scripts/build_site.py` erzeugt daraus die HTML-Ansicht und die Gesamtexporte als CSL-JSON und RIS. Titel und Auswahlprinzipien stehen heute in `data/web-konfiguration.json`. Beim Generieren werden sie in die HTML-Datei geschrieben; zum Neuerzeugen der Seite ist keine Word-Datei mehr nötig. Die ursprüngliche Datenerschließung aus Word ist davon zu unterscheiden.
 
-Die Webseite zeigt die gespeicherten Literaturangaben, statt sie neu aus Einzelfeldern zusammenzusetzen. Gestaltung, Icons und Downloadinhalte sind eingebettet. Einzel- und Gruppendownloads werden vorab erzeugt; JavaScript oder ein Server sind zum Lesen und Herunterladen nicht erforderlich.
+Die Webseite zeigt die gespeicherten Literaturangaben, statt sie neu aus Einzelfeldern zusammenzusetzen. Gestaltung, Icons und Offline-Downloadinhalte sind eingebettet. Ergänzend stehen echte Dateilinks und ein ZIP-Paket für mobile Browser bereit, die eingebettete Data-URL-Downloads einschränken können. Einzel- und Gruppendownloads werden vorab erzeugt; JavaScript ist nicht erforderlich.
 
 ### 6. Automatisch prüfen und manuell nachbessern
 
-Der Agent implementierte Kontrollen für erhaltene Quellenabsätze, eindeutige IDs, Jahreswerte, Beziehungen, CSV-Rücklesung, interne Sprungziele und die Inhalte aller Exportauswahlen. Der Bearbeiter kontrollierte die Bibliographie und die tatsächliche Webansicht. Seine Rückmeldungen führten beispielsweise zur Korrektur des Rücksprungankers und zur Ergänzung der Gruppen-Exporte.
+Der Agent implementierte Kontrollen für erhaltene Quellenabsätze, eindeutige IDs, Jahreswerte, Beziehungen, CSV-Rücklesung, interne Sprungziele und die Inhalte aller Exportauswahlen. Der Bearbeiter kontrollierte zahlreiche, nicht sämtliche Datensätze sowie die tatsächliche Webansicht. Seine Rückmeldungen führten beispielsweise zur Korrektur des Rücksprungankers und zur Ergänzung der Gruppen-Exporte.
 
-Diese Prüfungen ersetzen weder eine vollständige fachliche Freigabe noch praktische Imports in Literaturverwaltungsprogramme. Letztere sind noch nicht dokumentiert. Gerade bei Medienrollen und komplexen Seitenangaben können Austauschformate Informationen unterschiedlich abbilden.
+Der Bearbeiter hat die Datensätze geprüft und als eigenständige Datenpublikation freigegeben. RIS-Importe in Zotero und Citavi wurden erprobt; abgesehen von einer inzwischen korrigierten Notizaufteilung wurden bisher keine Fehler beobachtet. Der Originalnachweis wird nun mit dem vorangestellten Hinweis „Vollständige Literaturangabe:“ in einem einzigen RIS-Notizfeld ausgegeben. Die Tests sind keine behauptete Einzelkontrolle aller Metadaten oder aller Programme. Korrekturhinweise können als [GitHub Issue](https://github.com/trafikante/AvH-Bibliographie-Ette/issues) eingereicht werden.
 
 ## Modelle und dokumentierter Tokenumfang
 
@@ -96,4 +109,4 @@ Als sinngemäße Arbeitsaufträge für ähnliche Projekte eignen sich:
 
 Für andere Bibliographien müssen die Erkennungsregeln und Sonderfälle angepasst werden. Die Skripte sind projektspezifische Umsetzungshilfen, kein allgemeiner Word-Konverter. Ziel dieser Dokumentation ist die Nachvollziehbarkeit und Übertragbarkeit des Vorgehens, nicht die identische Wiederholung der ursprünglichen Sitzung.
 
-Felddefinitionen stehen im [Datenmodell](DATENMODELL.md), Bedienung und Exportgrenzen in [WEB-NUTZUNG.md](WEB-NUTZUNG.md). Für Daten und eigene Webinhalte gilt CC BY 4.0; die gesonderte Lizenzierung des Programmcodes bleibt offen, siehe [LIZENZ.md](LIZENZ.md).
+Felddefinitionen stehen im [Datenmodell](DATENMODELL.md), Bedienung und Exporthinweise in [WEB-NUTZUNG.md](WEB-NUTZUNG.md). Für Daten und redaktionelle Webinhalte gilt CC BY 4.0; der Programmcode ist unter [MIT](LICENSE) lizenziert. Die mehrsprachige Gestaltung der Benutzeroberfläche ist für eine nächste Iteration vorgesehen; die derzeitige Oberfläche ist deutschsprachig, die bibliographischen Originaltitel bleiben mehrsprachig.

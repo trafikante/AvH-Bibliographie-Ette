@@ -55,6 +55,12 @@
         },
         "license_url": {
           "const": "https://creativecommons.org/licenses/by/4.0/"
+        },
+        "publication_status": {
+          "const": "released"
+        },
+        "review_note": {
+          "type": "string"
         }
       }
     },
@@ -562,7 +568,6 @@
           },
           "review_status": {
             "enum": [
-              "draft",
               "reviewed"
             ]
           },

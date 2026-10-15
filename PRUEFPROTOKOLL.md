@@ -1,5 +1,30 @@
 # Prüfprotokoll der Erfassungsprobe
 
+## Inhalt
+
+- [Gültiger Publikationsstand vom 15.10.2026](#gültiger-publikationsstand-vom-15102026)
+- [Vollständige Offline-Webansicht](#vollständige-offline-webansicht)
+- [Bestätigte redaktionelle Festlegungen](#bestätigte-redaktionelle-festlegungen)
+- [Aktuelle Gesamterfassung aus v2 (13.10.2026)](#aktuelle-gesamterfassung-aus-v2-13102026)
+- [Quelle und Status](#quelle-und-status)
+- [Abdeckung](#abdeckung)
+- [Fachlich relevante Fälle](#fachlich-relevante-fälle)
+- [Technische Prüfungen](#technische-prüfungen)
+- [Noch fachlich zu prüfen](#noch-fachlich-zu-prüfen)
+- [GitHub](#github)
+
+## Gültiger Publikationsstand vom 15.10.2026
+
+Die Bibliographie ist als eigenständige Datenpublikation freigegeben. Der Bearbeiter hat zahlreiche Einträge kontrolliert und RIS-Importe in Citavi und Zotero erprobt; eine lückenlose Einzelkontrolle aller Metadaten wird nicht behauptet. Alle 262 Datensätze tragen nun `review_status: reviewed`, die Publikationsfreigabe und ihre Grundlage stehen zusätzlich in den Datensatzmetadaten. Bibliographische Angaben und IDs wurden dabei nicht verändert.
+
+Die RIS-Ausgabe wurde auf genau ein mehrzeiliges `N1`-Feld pro Datensatz umgestellt: Hinweis „Vollständige Literaturangabe:“ vor dem Originalnachweis. Ein Test mit dem offiziellen Zotero-RISReader bestätigte für alle 262 Datensätze genau ein entsprechendes Feld und die korrekte Reihenfolge. Das ist ein Parser-Test, kein erneuter Import in die vollständige Anwendung.
+
+Die schmale Browseransicht wurde bis 325 CSS-Pixel geprüft und ein dabei gefundener horizontaler Überlauf behoben. Der Tastatursprung setzt den Fokus auf den Hauptinhalt; die Exportlinks haben zugängliche Namen. Ein Praxistest mit Screenreader oder echtem iPhone wurde nicht durchgeführt. Schema, CSV/JSON-Konsistenz und unveränderte Quellenangaben wurden kontrolliert. `git diff --check` meldet noch zwei aus den chinesischen Originalnachweisen übernommene Absatzend-Leerzeichen in RIS; diese Quellenzeichen wurden bewusst nicht stillschweigend entfernt.
+
+Sprachregister und Sprachgruppen sind chronologisch aufsteigend sortiert. Direkte Dateilinks und ein ZIP-Paket ergänzen die eingebetteten Downloads. HTTP-Dateien, ZIP-Inhalt und ein ZIP-Download im lokalen Browser wurden geprüft; ein echter erneuter iPhone-/Firefox-Test steht nach Veröffentlichung aus. Die bisherigen Data-URL-Downloads hatten beim Bearbeiter in Chrome auf dem Laptop funktioniert, nicht jedoch auf dem iPhone.
+
+Grundlegende Barrierefreiheitsmaßnahmen, Repository-Link und separate Webkonfiguration ergänzt; der Seitengenerator benötigt keine Word-Datei mehr. Daten/redaktionelle Inhalte: CC BY 4.0; Programmcode: MIT. Eine mehrsprachige Benutzeroberfläche bleibt für die nächste Iteration vorgesehen. Nachfolgende Abschnitte sind frühere Prüfstände und keine aktuellen Einschränkungen der Freigabe oder Lizenz.
+
 ## Vollständige Offline-Webansicht
 
 Erweiterung nach Nutzerwunsch: Kopfbereich mit grüner Farbfläche, ruhigerer Titelgestaltung, Statusfeld und Schnellnavigation überarbeitet. Eingebettete RIS-/CSL-JSON-Gruppenexports für sieben Hauptkategorien, fünf akademische Untergruppen, acht Sprachen und 36 Hauptjahre hinzugefügt: 56 Gruppen, 112 Downloads. Prüfung vergleicht für jede Gruppe sämtliche Datensätze, IDs, Reihenfolge und Inhalte mit der entsprechenden Auswahl im Quelldatensatz, nicht nur die Trefferzahl. Mehrsprachige Einträge in jeder zutreffenden Sprachgruppe; Jahresgruppen ausschließlich nach Hauptjahr. Keine Änderung bibliographischer Daten, der Word-Datei oder der GitHub-Anbindung. Browserdarstellung und tatsächliche Browserdownloads bleiben mangels erlaubter lokaler Browserautomation manuell zu prüfen.
@@ -137,7 +162,7 @@ Das Skript schreibt bei `--check` keine Dateien. Für Anwender genügt es, `prob
 4. Hörbücher und Zeitschriftendossiers benötigen beim RIS-Export programmabhängige Abbildung und Importkontrolle.
 5. Die Kategorieüberschrift „Akademische Buchpublikationen“ folgt der endgültigen Quelle, obwohl ihre vorangestellte Übersicht die kürzere Form „Akademische Publikationen“ verwendet.
 6. Kategorien-, Sprach- und Jahresregister können ohne JavaScript umgesetzt werden. Frei kombinierbare dynamische Filter sind mit der Vorgabe einer einzelnen, statischen HTML-Datei ohne JavaScript nicht enthalten. Die vorliegende Probe ist eine Kontrollansicht, noch keine fertige Filteroberfläche.
-7. Lizenz für Daten/Code und genaue Veröffentlichungsmetadaten stehen vor einem Upload festzulegen.
+7. Lizenz inzwischen festgelegt: Daten und redaktionelle Webinhalte CC BY 4.0, Programmcode MIT; siehe `LIZENZ.md` und `LICENSE`.
 
 ## GitHub
 

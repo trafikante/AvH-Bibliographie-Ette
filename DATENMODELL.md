@@ -1,98 +1,112 @@
 # Datenmodell und Erfassungsregeln
 
-Aktuelle Nutzerfestlegung: Hauptgruppe „Akademische Publikationen“, stabile ID `akademische-buchpublikationen`. Hörbücher bleiben eigenständige Untergruppe `hoerbuecher`, bibliographisch `book` mit Audio-Medium. Zeitschriftendossiers unter `sammelbaende` werden im Export ebenfalls als `book` behandelt, ohne ihren Zeitschriftenkontext zu entfernen. Die nachfolgenden älteren Angaben zum Typ `periodical` dokumentieren den vorausgehenden Entwurfsstand. Nutzerbestätigte Sprachen werden nach stabiler ID mit Zuordnungsstatus `explicit` gespeichert.
+## Inhalt
 
-Entwurf 0.1.0, 13.10.2026. Ziel ist eine quellentreue Bibliographie mit getrennten redaktionellen Kategorien und standardisierten bibliographischen Typen.
+- [Aufbau des Datensatzes](#aufbau-des-datensatzes)
+- [Felder eines Eintrags](#felder-eines-eintrags)
+- [Redaktionelle Kategorien](#redaktionelle-kategorien)
+- [Bibliographische Typen und Personenrollen](#bibliographische-typen-und-personenrollen)
+- [Sprachen, Jahre und weitere Ausgaben](#sprachen-jahre-und-weitere-ausgaben)
+- [Quellen, Seiten und Online-Verweise](#quellen-seiten-und-online-verweise)
+- [Export und Webansicht](#export-und-webansicht)
+- [Freigabe und Pflege](#freigabe-und-pflege)
 
-## Drei Ebenen
+Diese Spezifikation beschreibt den veröffentlichten JSON-Projektdatensatz mit 262 Einträgen. Maßgeblich sind `data/bibliographie.json` und das zugehörige Projektschema `schema/bibliographie.schema.json`. Die CSV-Datei ist eine tabellarische Ableitung; CSL-JSON und RIS sind Austauschformate.
 
-Aktuelle Erweiterung für v2 (13.10.2026): Die frühere Kategorie „Debatten“ heißt jetzt „Wissenschaftskommunikation“; ihre stabile ID bleibt `debatten`. Medien erhalten CSL-Typ `broadcast` und Projektmedium `audio` oder `video`. Belegte vollständige Erscheinungsdaten stehen in `issued.date-parts`; Aufzeichnungs- und Wiederholungsdaten bleiben im vollständigen Quellnachweis unterscheidbar.
-
-`online_resources` bewahrt sämtliche Online-Verweise der Quellenangabe in ihrer Reihenfolge. Ausgabenbezogene Links bleiben zusätzlich in `related_editions` zugeordnet. CSL `URL` enthält höchstens die primäre Adresse. Bei Medien beschreibt `contributors` zusätzliche Rollen `participant`, `interviewer` und `moderator`; ausdrücklich genannte Mitwirkung wird nicht pauschal als Autorschaft ausgegeben. Namen ohne sichere Zerlegung bleiben `literal`.
-
-Der vollständige v2-Datensatz umfasst 262 Einträge und bleibt fachlich `draft`. Die folgenden Probeangaben dokumentieren den ursprünglichen Entwurfsstand.
-
-1. Quellenfassung: vollständige Literaturangabe, exakte Textabsätze und übernommene Kursivierung.
-2. Projektmetadaten: stabile ID, Kategorie, Untergruppe, Publikationssprachen, Jahreszuordnung, Beziehungen und Erfassungsstatus.
-3. Bibliographische Metadaten: CSL-JSON-kompatible Titel, Personen mit Rollen, Erscheinungsangaben, Seiten und Identifikatoren.
-
-Die Webseite zeigt die redaktionellen Kategorien. CSL-Typen dienen der bibliographischen Nachnutzung, nicht als Ersatz der Kategoriennavigation.
-
-## Hauptfelder je Eintrag
+## Aufbau des Datensatzes
 
 | Feld | Bedeutung |
 |---|---|
-| `id` | Dauerhafte ID `ette-000001` usw.; nicht aus Jahr, Titel oder Absatznummer berechnet. Bereits vergebene IDs nicht umnummerieren oder wiederverwenden. |
-| `category_id` | Hauptkategorie aus dem kontrollierten Vokabular. |
-| `subcategory_id` | Untergruppe der akademischen Buchpublikationen; sonst `null`. |
-| `languages` | Liste der Publikationssprachen als Sprachcodes, z. B. `de`, `en`, `es`, `pt`, `fr`, `ru`, `zh`. Eine leere Liste bedeutet noch nicht bestimmt. |
-| `language_assessment` | Explizit aus der Quelle, anhand des Titels erschlossen oder noch ungeklärt; jeweils mit Begründung. Erschlossen ist nicht gleich extern verifiziert. |
-| `publication_year` | Erscheinungsjahr der beschriebenen Hauptausgabe; bei Portalen dokumentiertes Startjahr. |
-| `year_basis` | `publication` oder `online-start`; bei fehlendem Jahr künftig `null` und eigener Prüfhinweis. |
-| `bibliographic` | CSL-JSON-kompatibler Datensatz mit identischer ID und standardisiertem Typ. Fehlende optionale Felder werden ausgelassen. |
-| `parallel_titles` | In der Quelle vorhandene Übersetzungen bzw. Paralleltitel mit Sprache und Status; nicht als Publikationssprache interpretieren. |
-| `publication_medium` | Text, Hörbuch oder Website; unabhängig vom CSL-Typ. |
-| `related_editions` | In Fortsetzungsabsätzen genannte weitere Ausgaben mit eigenem Jahr, eigener Literaturangabe und ausgabenbezogenen Links. |
-| `relations` | Explizite Verbindung zu anderen Erfassungseinträgen, etwa Teil eines Dossiers oder dieselbe Publikation in einer anderen redaktionellen Kategorie. |
-| `notes` | Besonderheiten ohne Verlust wissenschaftlicher Information. |
-| `review_status` | In dieser Probe `draft`; technische Prüfung ist keine fachliche Freigabe. |
-| `source` | Dateiname, SHA256, interne Absatznummern, Absatztexte, vollständige Literaturangabe und HTML-Darstellung. |
+| `schema_version` | Version des Projektformats, derzeit `0.2.0`. |
+| `dataset` | Titel, Erfassungsdatum, Umfang, Quellenbezug, Lizenz und Publikationsfreigabe. |
+| `categories` | Kontrollierte Kategorien mit stabilen IDs, sichtbaren Bezeichnungen und Untergruppen. |
+| `records` | Bibliographische Erfassungseinträge. |
 
-## Kategorien aus der finalen Word-Datei
+`dataset.status: complete-transcription` bezeichnet die vollständige Übertragung, `dataset.publication_status: released` die Publikationsfreigabe. `dataset.review_note` erläutert deren Grundlage: redaktionelle Kontrolle zahlreicher Einträge und Importtests, keine behauptete Einzelprüfung sämtlicher Felder. `created` bezeichnet das Datum der Datensatzerstellung, nicht das Erscheinungsjahr einer Publikation.
 
-| ID | Bezeichnung | Untergruppen |
-|---|---|---|
-| `literarisches` | Literarisches | keine |
-| `akademische-buchpublikationen` | Akademische Buchpublikationen | Monographien, Editionen, Sammelbände, Didaktische Materialien, Hörbücher |
-| `internet-praesentationen` | Internet-Präsentationen | keine |
-| `aufsaetze` | Aufsätze | keine |
-| `vorworte-lexikonartikel-bibliographien` | Vorworte, Lexikonartikel und Bibliographien | keine |
-| `debatten` | Debatten | keine |
-| `uebersetzungen` | Übersetzungen | keine |
+## Felder eines Eintrags
 
-Die Bezeichnung „Akademische Buchpublikationen“ folgt der tatsächlichen Abschnittsüberschrift der aktuellen DOCX. Keine frühere Änderungsempfehlung wird nachträglich in die abgeschlossene Quelle eingetragen. Die Kategorienliste im JSON enthält auch die unveränderten Unterüberschriften `a.` bis `e.` als Quellenbezeichnungen.
+| Feld | Erfassungsregel |
+|---|---|
+| `id` | Dauerhafte ID im Muster `ette-000001`. Nicht aus Jahr oder Absatznummer berechnet; nicht umnummerieren oder wiederverwenden. |
+| `source_order` | Position in der übernommenen Quellenreihenfolge, beginnend mit 1. |
+| `category_id` | Eine Hauptkategorie aus dem kontrollierten Vokabular. |
+| `subcategory_id` | Eine akademische Untergruppe oder `null`, wenn nicht anwendbar. |
+| `languages` | Liste der Publikationssprachen. Leere Liste bedeutet ungeklärt, nicht sprachlos. |
+| `language_assessment` | Status und Begründung der Sprachzuordnung: ausdrücklich belegt/bestätigt (`explicit`), erschlossen (`inferred`) oder ungeklärt (`undetermined`). |
+| `publication_year` | Jahr der beschriebenen Hauptausgabe, bei Portalen das Startjahr. |
+| `year_basis` | `publication` oder `online-start`. |
+| `publication_medium` | `text`, `audio`, `video` oder `website`, unabhängig von Kategorie und CSL-Typ. |
+| `bibliographic` | Bibliographische Standardfelder mit identischer ID; fehlende optionale Angaben werden ausgelassen. |
+| `parallel_titles` | Vorhandene Paralleltitel beziehungsweise Übersetzungen mit Sprache und Status. |
+| `container_contributors` | Personenrollen des übergeordneten Werkes, getrennt von Rollen des Einzelbeitrags. |
+| `contributors` | Zusätzliche Medienrollen, falls vorhanden: `participant`, `interviewer`, `moderator`, jeweils mit Namensobjekt. |
+| `related_editions` | Weitere Auflagen oder Ausgaben mit eigenem Jahr, Quellenangabe und gegebenenfalls URL. |
+| `relations` | Beziehungen zu vorhandenen IDs: `part-of` oder `same-publication`. |
+| `online_resources` | Online-Verweise der vollständigen Quellenangabe in ihrer Reihenfolge; `basis: current-source`. |
+| `notes` | Erschließungs- und Quellenhinweise; keine automatisch öffentlich angezeigten Kommentare. |
+| `review_status` | `reviewed`: vom Bearbeiter für die Veröffentlichung freigegebener Datenbestand. Keine Zusicherung, dass jedes Feld einzeln verifiziert wurde. |
+| `source` | Dateiname, SHA256, Absatznummern, Absatztexte, vollständige Literaturangabe und deren HTML-Fassung. |
 
-## Bibliographischer Standard
+Leere Listen bedeuten keine erfassten Listenelemente; `null` bezeichnet bei der Untergruppe „nicht anwendbar“. Unbekannte optionale Einzelangaben werden nicht durch erfundene Werte ersetzt. Die Dokumentation einer Datenfelddefinition ist keine Behauptung, dass das Feld in jedem Eintrag befüllt ist.
 
-CSL-JSON ist Grundlage der Feldbenennung. Verwendete Typen in der Probe: `article-journal`, `article-newspaper`, `book`, `chapter`, `periodical`, `webpage`.
+## Redaktionelle Kategorien
 
-- Eine Edition und ein Sammelband sind bibliographisch `book`, mit unterschiedlicher Personenrollenbelegung und redaktioneller Untergruppe.
-- Ein Zeitschriftendossier ist `periodical`, nicht pauschal `book`, auch wenn es redaktionell unter Sammelbänden steht.
-- Ein Hörbuch wird als `book` mit `medium: Audio-CD` und Projektmedium `audio` beschrieben. Diese Modellentscheidung muss beim späteren RIS-Export auf das im Zielprogramm verfügbare Hörbuchformat abgebildet werden.
-- Ein didaktisches Buch bleibt `book`; die didaktische Funktion steht in der Untergruppe.
-- Vorworte und Einleitungen in Büchern sind `chapter`, Einleitungen in Zeitschriften `article-journal`.
-- Ein Roman-Auszug in einer Zeitschrift bleibt bibliographisch `article-journal` und redaktionell „Literarisches“.
-- Übersetzungen erhalten den Typ der publizierten Einheit und die in der Quelle belegten Rollen. Ette wird nicht pauschal als Autor eines Humboldt-Buches gesetzt.
+| Stabile ID | Sichtbare Bezeichnung |
+|---|---|
+| `literarisches` | Literarisches |
+| `akademische-buchpublikationen` | Akademische Publikationen |
+| `internet-praesentationen` | Internet-Präsentationen |
+| `aufsaetze` | Aufsätze |
+| `vorworte-lexikonartikel-bibliographien` | Vorworte, Lexikonartikel und Bibliographien |
+| `debatten` | Wissenschaftskommunikation |
+| `uebersetzungen` | Übersetzungen |
 
-Schemaquelle: [CSL-JSON-Schema](https://github.com/citation-style-language/schema/blob/master/schemas/input/csl-data.json). Die ausgewählte Typmenge und die benutzten Felder wurden anhand des offiziellen Schemas geprüft. Das projektspezifische Schema ist ein dokumentierter Ausschnitt, kein vollständiger Ersatz des CSL-Schemas.
+Nur „Akademische Publikationen“ hat Untergruppen: `monographien`, `editionen`, `sammelbaende`, `didaktische-materialien` und `hoerbuecher`. Technische IDs bleiben auch bei geänderten sichtbaren Bezeichnungen stabil.
 
-## Sprachen
+## Bibliographische Typen und Personenrollen
 
-Publikationssprache und Sprache eines Klammertitels sind verschiedene Angaben. Russische Umschrift mit englischem Paralleltitel bleibt ein russischer Beitrag; ein chinesischer Aufsatz mit englischem Klammertitel bleibt ein chinesischer Beitrag. Zweisprachige Beiträge erhalten zwei Sprachcodes. Sprache des übergeordneten Buches und Sprache des einzelnen Beitrags nicht vermischen.
+Die Feldnamen orientieren sich an CSL-JSON. Im veröffentlichten Bestand werden `book`, `chapter`, `article-journal`, `article-magazine`, `article-newspaper`, `broadcast` und `webpage` verwendet.
 
-Ein deutsches Titelblatt eines Sammelbandes beweist nicht, dass alle Beiträge deutsch sind. Beim Sammelband „Ansichten Amerikas“ bleibt die Sprache deshalb in der Probe ungeklärt. Andere plausible Titelzuordnungen werden ausdrücklich als erschlossen gekennzeichnet. Eine spätere Filteroberfläche muss eine Gruppe „Sprache noch ungeklärt“ anzeigen.
+- Editionen, Monographien, didaktische Bücher und Sammelbände: `book`, mit den jeweils belegten Rollen.
+- Zeitschriftendossiers: auf redaktionelle Festlegung wie Sammelbände als `book`; Zeitschriftenkontext, Band und Heft bleiben erhalten.
+- Hörbücher: `book` mit Audio-Medium; im RIS-Export `SOUND`.
+- Audio-/Videobeiträge: `broadcast`; RIS-Typ `SOUND` beziehungsweise `VIDEO`.
+- Vorworte/Einleitungen: Typ der publizierten Einheit, etwa `chapter` in einem Buch oder `article-journal` in einer Zeitschrift.
+- Übersetzungen: Typ der übersetzten publizierten Einheit. Ette wird nicht pauschal als Autor eines Humboldt-Buches gesetzt.
 
-CSL `language` wird nur für Einträge mit genau einer zugeordneten Publikationssprache gesetzt. Mehrsprachigkeit bleibt verlustfrei in `languages`; eine Liste wird nicht in ein einzelnes CSL-Sprachfeld gezwungen.
+Namen werden, soweit sicher, in `family`, `given` und gegebenenfalls `non-dropping-particle` getrennt. `Humboldt, Alexander von` entspricht Familie `Humboldt`, Vorname `Alexander`, Partikel `von`. Nicht sicher zerlegbare Namen bleiben als `literal` erhalten.
 
-## Jahre und Ausgaben
+Autoren, Herausgeber, Übersetzer, Sprecher und weitere Mitwirkende bleiben unterscheidbar. Rollen eines übergeordneten Werkes werden einem Einzelbeitrag nicht automatisch zugeschrieben.
 
-Es wird das Erscheinungsjahr der beschriebenen Ausgabe erfasst, nicht eine beliebige Jahreszahl im Titel, ein Archivdatum oder das Jahr der Erfassung.
+## Sprachen, Jahre und weitere Ausgaben
 
-Die Grundregel für die Probe ist ein Datensatz pro redaktionellem Haupteintrag. Neuauflagen aus Fortsetzungsabsätzen werden unter `related_editions` mit eigenem Jahr dokumentiert. Beispiel: „Weltbewußtsein“ hat 2002 als Hauptjahr und Ausgaben von 2005 und 2020. Der Link von 2005 bleibt an der digitalen Ausgabe und wird nicht als Link der Druckausgabe von 2002 ausgegeben.
+Publikationssprache und Sprache eines Klammertitels sind verschiedene Angaben. Ein chinesischer oder russischer Beitrag mit englischem Paralleltitel wird dadurch nicht englischsprachig. Mehrsprachige Publikationen erhalten mehrere Codes: `de`, `en`, `es`, `fr`, `pt`, `zh`, `ru`, `gl` sind im Bestand vertreten. CSL `language` wird nur bei genau einer zugeordneten Sprache gesetzt.
 
-Für die spätere Jahresnavigation: Hauptjahr als Voreinstellung; optionale Registeransicht „einschließlich weiterer Ausgaben“ mit deutlicher Ausgabenkennzeichnung. Werden Ausgaben später eigenständig erfasst, erhalten sie neue IDs und Beziehungen zum Haupteintrag; der bisherige Eintrag bleibt adressierbar.
+Das Hauptjahr steht konsistent in `publication_year` und `bibliographic.issued.date-parts[0][0]`. Ein belegter Tag wird als `[Jahr, Monat, Tag]` erfasst. Titeljahreszahlen sowie abweichende Aufzeichnungs-/Wiederholungsdaten ersetzen nicht das Publikationsdatum.
 
-## Personen, Seiten und Beziehungen
+Ein redaktioneller Haupteintrag bleibt ein Datensatz. Weitere Auflagen stehen in `related_editions` mit `publication_year`, `label`, `source_paragraph`, `citation_text` und gegebenenfalls `url`. Bei mehreren zugehörigen Jahren kann `publication_years` ergänzen. Ausgabenbezogene Links bleiben dieser Ausgabe zugeordnet. Jahresregister und Jahres-Gruppenexports verwenden das Hauptjahr; zusätzliche Ausgaben haben ein eigenes Register.
 
-- Namen stehen getrennt nach Familienname, Vorname und gegebenenfalls Namenspartikel. Die angezeigte Literaturangabe bleibt unverändert. `Humboldt, Alexander von` wird als Familie `Humboldt`, Vorname `Alexander`, Partikel `von` modelliert.
-- Herausgeber und Übersetzer des Beitrags werden von Herausgebern und Übersetzern des übergeordneten Buches unterschieden. Containerrollen stehen in den projektspezifischen `container_contributors` und werden nicht fälschlich dem Beitrag zugeschrieben.
-- Bei „Die Humboldtsche Wissenschaft …“ wird Silvia Kruse als Übersetzerin des Buches, nicht ohne Beleg als Übersetzerin des deutschen Einleitungsbeitrags geführt.
-- Römische Seiten, nicht zusammenhängende Paginierung und Hinweise wie „nur gerade Seiten“ bleiben erhalten. Ein spezieller Seitenbereich wird nicht zu einem vermeintlich fortlaufenden Bereich vereinfacht.
-- Erfassungseinträge verschiedener Kategorien werden nicht stillschweigend dedupliziert. Edition und Übersetzungsleistung zu derselben Ausgabe können getrennte Einträge mit einer Beziehung bleiben.
-- DOI wird als Kennung ohne Resolverpräfix in CSL gespeichert, als vollständige DOI-URL in der Ansicht dargestellt. Eine Dossier-URL wird nicht automatisch als Artikel-URL anderer Beiträge übernommen.
+## Quellen, Seiten und Online-Verweise
 
-## Quellenbezug und Kontrolle
+`source.paragraphs` bewahrt die unveränderten Quellenabsätze, `source.citation_text` verbindet sie mit Zeilenumbrüchen. `source.citation_html` enthält escapten Text, Kursivierung mit `<em>` und Hyperlinks. Absatznummern dienen nur als Fundstellen in der durch SHA256 bestimmten Word-Fassung, nicht als dauerhafte IDs.
 
-`source.paragraphs` enthält unveränderte Absätze. `source.citation_text` verbindet zugehörige Absätze mit Zeilenumbrüchen. `source.citation_html` enthält ausschließlich escapten Text, `<em>` und Links; es wird kein aktiver Inhalt aus Word übernommen. Absatznummern dienen nur der Wiederauffindbarkeit innerhalb der durch SHA256 identifizierten Quelle, nicht als permanente Datensatz-ID.
+Historische Schreibungen, chinesische Schriftzeichen und Transliteration bleiben erhalten. Das russische Transliterationzeichen `ʹ` ist U+02B9, kein typographisch zu ersetzender Apostroph.
 
-Nachprüfbar sind: 20 verschiedene IDs, Abdeckung aller sieben Kategorien und aller fünf akademischen Untergruppen, Quellenidentität, Verlustfreiheit der übernommenen Absatztexte, richtige Verknüpfung der Fortsetzungen und Schema-Konformität. Fachliche Freigabe der Erschließung steht anschließend an.
+Römische, nicht zusammenhängende und besonders erläuterte Paginierungen werden nicht zu vermeintlich fortlaufenden Seitenbereichen vereinfacht. Bedeutungsvolle Mehrfachnachweise werden nicht automatisch dedupliziert.
+
+DOI steht in `bibliographic.DOI` ohne Resolverpräfix; die Ansicht verwendet die vollständige DOI-URL. CSL `URL` enthält höchstens die primäre Adresse. `online_resources` bewahrt auch weitere Verweise; deren genaue Zuordnung ergibt sich aus dem vollständigen Nachweis und gegebenenfalls `related_editions`.
+
+## Export und Webansicht
+
+Der Projektdatensatz ist das informationsreichere Format. CSV bildet seine Felder tabellarisch ab; verschachtelte Inhalte können als JSON-Zeichenfolgen in Zellen stehen. CSL-JSON und RIS ersetzen nicht sämtliche Projektfelder.
+
+CSL-JSON erhält den vollständigen Originalnachweis zusätzlich als `note`. RIS verwendet für den Originalnachweis und ergänzende Erläuterungen ein einziges mehrzeiliges `N1`-Feld, beginnend mit „Vollständige Literaturangabe:“. Spezifische Rollen und besondere Seitenangaben bleiben nötigenfalls dort erhalten.
+
+Die HTML-Ansicht zeigt `source.citation_html`, nicht einen aus Einzelfeldern neu zusammengesetzten Nachweis. Sprachregister und Sprach-Gruppenexports sind nach Hauptjahr aufsteigend sortiert; bei gleichem Jahr bleibt die Quellenreihenfolge maßgeblich. Kategorien zeigen die Quellenreihenfolge. Webtitel und Auswahlprinzipien stehen in `data/web-konfiguration.json`; sie sind Webmetadaten, keine zusätzlichen bibliographischen Einträge.
+
+## Freigabe und Pflege
+
+Der Bestand ist für die Datenpublikation freigegeben. Es liegen redaktionelle Kontrollen zahlreicher Einträge sowie RIS-Importtests in Zotero und Citavi vor. Dies bedeutet keine lückenlose Einzelverifikation aller Felder. Sprachzuordnungen behalten ihre jeweilige Begründung auch nach der Publikationsfreigabe.
+
+Korrekturen sollen stabile IDs und Quellenbezüge bewahren und in Daten, Exporte und HTML übernommen werden. Hinweise können als [GitHub Issue](https://github.com/trafikante/AvH-Bibliographie-Ette/issues) eingereicht werden. Datenlizenz: CC BY 4.0; Programmcode: [MIT](LICENSE).

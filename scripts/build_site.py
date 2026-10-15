@@ -8,8 +8,7 @@ import io
 import json
 import re
 import sys
-import hashlib
-from docx import Document
+import zipfile
 from lxml import html as html_parser
 
 PROJECT = Path(__file__).resolve().parents[1]
@@ -38,6 +37,13 @@ CSS += '''
 header{position:relative;background:linear-gradient(125deg,#e9efe5 0%,#f7f6f1 78%);border-top:6px solid var(--accent);padding-top:42px;padding-bottom:32px}header h1{max-width:1000px;font-weight:500;letter-spacing:-.025em;line-height:1.17;margin:18px 0 20px}header .eyebrow{display:inline-block;border-bottom:1px solid #9fb6a5;padding-bottom:8px;margin:0}header .intro{font-size:.95rem;margin-bottom:14px}header .status{display:inline-block;background:#fff9;border:1px solid #c9d6c6;border-radius:25px;padding:5px 13px;font-size:.78rem;margin:0 0 14px}.header-actions{display:flex;gap:10px;flex-wrap:wrap;margin:8px 0 18px}.header-actions a{padding:7px 13px;border:1px solid var(--accent);border-radius:5px;text-decoration:none;font-size:.82rem}.header-actions a:first-child{background:var(--accent);color:white}.header-actions a:hover{background:#dce8da;color:var(--ink)}header .publication{border-left:3px solid #9fb6a5;padding:7px 15px;max-width:840px;background:#ffffff70;font-size:.83rem}header .selection{margin:12px 0}.bulk-downloads{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin:10px 0 18px;font-size:.75rem;color:var(--muted)}.bulk-downloads .download{padding:3px 8px}.subheading+.bulk-downloads{margin-top:-5px}.register-details details>.bulk-downloads{margin-bottom:10px}
 @media(max-width:850px){header{padding-top:26px}header h1{font-size:2rem}.header-actions{gap:7px}}
 @media print{header{background:none;border-top:0;padding-top:0}.header-actions,.bulk-downloads,.selection{display:none}header .status,header .publication{background:none;border:0;padding:0}}
+'''
+
+CSS += '''
+body{font-size:17px}h1,.index-links a,.selection-content{overflow-wrap:anywhere}.entry-meta,.entry-actions,.bulk-downloads,.hint,.status{font-size:.9rem}footer{font-size:.9rem}.download{min-height:36px;padding:6px 10px}.section-heading{flex-wrap:wrap}.index-year{margin-right:.5em}.direct-files{padding:14px;border:2px solid var(--accent);border-radius:6px;background:var(--pale)}.direct-files ul{padding-left:1.4em}.direct-files li{margin:8px 0}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;border:0}a:focus-visible,summary:focus-visible{outline:3px solid #164d3c;outline-offset:4px}.skip{top:auto;transform:translateY(-200%)}.skip:focus{top:8px;transform:none}article:focus-within{outline:2px solid var(--accent);outline-offset:2px}.navigation:focus,main:focus{outline:2px solid var(--accent)}details:target>summary{background:var(--pale);outline:2px solid var(--accent)}
+.section-heading{overflow-wrap:anywhere}.category-list a>span:not(.count){min-width:0;overflow-wrap:anywhere}
+@media(pointer:coarse){a.download,.header-actions a,summary{min-height:44px;display:inline-flex;align-items:center}.entry-actions{gap:12px}.direct-files a{display:inline-block;padding:8px 0}}
+@media print{.direct-files,.sr-only{display:none}article:focus-within{outline:0}}
 '''
 
 
@@ -73,9 +79,13 @@ def ris_record(record, category_labels, subgroup_labels):
                 'article-magazine': 'MGZN', 'article-newspaper': 'NEWS', 'webpage': 'ELEC'}
     kind = 'SOUND' if audio else 'VIDEO' if video else type_map[metadata['type']]
     lines = []
+    notes = ['Vollständige Literaturangabe:\n' + record['source']['citation_text']]
 
     def field(tag, value):
         if value:
+            if tag == 'N1':
+                notes.append(str(value))
+                return
             for part in str(value).splitlines():
                 lines.append(tag + '  - ' + part)
 
@@ -118,16 +128,17 @@ def ris_record(record, category_labels, subgroup_labels):
             field('N1', 'Weiterer Online-Verweis (Zuordnung siehe Literaturangabe): ' + resource['url'])
     field('KW', category_labels[record['category_id']])
     field('KW', subgroup_labels.get(record['subcategory_id']))
-    field('N1', 'Vollständige Literaturangabe:')
-    field('N1', record['source']['citation_text'])
     field('N1', 'Medium: ' + metadata['medium'] if metadata.get('medium') else '')
+    note_lines = '\n\n'.join(notes).splitlines()
+    lines.append('N1  - ' + note_lines[0])
+    lines.extend('      ' + line if line else '' for line in note_lines[1:])
     lines.append('ER  - ')
     return '\r\n'.join(lines) + '\r\n\r\n'
 
 
-def download(label, filename, content, mime):
+def download(label, filename, content, mime, context=None):
     payload = base64.b64encode(content.encode('utf-8')).decode('ascii')
-    return '<a class="download" download="' + escape(filename) + '" href="data:' + mime + ';charset=utf-8;base64,' + payload + '">' + escape(label) + '</a>'
+    return '<a class="download" aria-label="' + escape(label + ' herunterladen: ' + (context or filename)) + '" download="' + escape(filename) + '" href="data:' + mime + ';charset=utf-8;base64,' + payload + '">' + escape(label) + '</a>'
 
 
 def index_link(record, edition=None):
@@ -140,28 +151,27 @@ def index_link(record, edition=None):
 def bulk_downloads(records, group, category_labels, subgroup_labels):
     ris = ''.join(ris_record(record, category_labels, subgroup_labels) for record in records)
     csl = json.dumps([csl_record(record) for record in records], ensure_ascii=False, indent=2) + '\n'
-    links = download('RIS', group + '.ris', ris, 'application/x-research-info-systems')
-    links += download('CSL-JSON', group + '.json', csl, 'application/json')
+    if group.startswith('kategorie-'):
+        context = category_labels[group.removeprefix('kategorie-')]
+    elif group.startswith('untergruppe-'):
+        context = subgroup_labels[group.removeprefix('untergruppe-')]
+    elif group.startswith('sprache-'):
+        context = 'Sprache ' + LANGUAGES[group.removeprefix('sprache-')]
+    else:
+        context = 'Jahr ' + group.removeprefix('jahr-')
+    context += ', ' + str(len(records)) + ' Einträge'
+    links = download('RIS', group + '.ris', ris, 'application/x-research-info-systems', context)
+    links += download('CSL-JSON', group + '.json', csl, 'application/json', context)
     return '<div class="bulk-downloads" data-export-group="' + escape(group) + '"><span>' + str(len(records)) + ' Einträge herunterladen:</span>' + links + '</div>'
 
 
 def build_page(dataset):
-    source = PROJECT.parent / dataset['dataset']['source_file']
-    assert hashlib.sha256(source.read_bytes()).hexdigest() == dataset['dataset']['source_sha256'], 'Quellenfassung geändert; zuerst Datensatz aktualisieren.'
-    document = Document(source)
-    title = next(paragraph.text for paragraph in document.paragraphs if paragraph.text.startswith('Schriftenverzeichnis:'))
-    principles = []
-    in_principles = False
-    for paragraph in document.paragraphs:
-        text = paragraph.text.strip()
-        if text == 'Prinzipien der Auswahl':
-            in_principles = True
-        elif in_principles and text.startswith('Sie unterscheidet die Kategorien'):
-            break
-        elif in_principles and text:
-            principles.append(text)
+    config = json.loads((PROJECT / 'data/web-konfiguration.json').read_text(encoding='utf-8'))
+    title = config['title']
+    principles = config['selection_principles']
     selection = '<details class="selection"><summary>Prinzipien zur Auswahl</summary><div class="selection-content">' + ''.join('<p>' + escape(text) + '</p>' for text in principles) + '</div></details>'
     records = dataset['records']
+    chronological_records = sorted(records, key=lambda record: (record['publication_year'], record['source_order']))
     categories = dataset['categories']
     category_labels = {category['id']: category['label'] for category in categories}
     subgroup_labels = {subgroup['id']: subgroup['label'] for category in categories for subgroup in category['subcategories']}
@@ -194,11 +204,13 @@ def build_page(dataset):
             meta = entry_icon + '<span>' + escape(label) + '</span><span class="entry-year">' + str(record['publication_year']) + '</span><span class="tag">' + escape(languages) + '</span>'
             ris = ris_record(record, category_labels, subgroup_labels)
             csl = json.dumps([csl_record(record)], ensure_ascii=False, indent=2) + '\n'
-            actions = download('RIS', record['id'] + '.ris', ris, 'application/x-research-info-systems') + download('CSL-JSON', record['id'] + '.json', csl, 'application/json') + '<a class="back" href="#seitenanfang">Zurück zur Navigation ↑</a>'
-            content.append('<article id="' + record['id'] + '" aria-label="' + escape(record['bibliographic']['title']) + '"><div class="entry-meta">' + meta + '</div><p class="citation">' + record['source']['citation_html'] + '</p><div class="entry-actions">' + actions + '</div></article>')
+            actions = download('RIS', record['id'] + '.ris', ris, 'application/x-research-info-systems', record['bibliographic']['title']) + download('CSL-JSON', record['id'] + '.json', csl, 'application/json', record['bibliographic']['title']) + '<a class="back" href="#seitenanfang">Zurück zur Navigation ↑</a>'
+            level = 'h4' if subgroup else 'h3'
+            heading = '<' + level + ' class="sr-only" id="' + record['id'] + '-titel">' + escape(record['bibliographic']['title']) + '</' + level + '>'
+            content.append('<article id="' + record['id'] + '" aria-labelledby="' + record['id'] + '-titel">' + heading + '<div class="entry-meta">' + meta + '</div><p class="citation">' + record['source']['citation_html'] + '</p><div class="entry-actions">' + actions + '</div></article>')
         category_exports = bulk_downloads([record for record in records if record['category_id'] == category['id']], 'kategorie-' + category['id'], category_labels, subgroup_labels)
         sections.append('<section class="category-section" id="' + category['id'] + '"><h2 class="section-heading">' + escape(category['label']) + '<span class="count">' + str(counts[category['id']]) + ' Einträge</span></h2>' + category_exports + ''.join(content) + '</section>')
-    language_register = ''.join('<details id="sprache-' + code + '"><summary>' + LANGUAGES[code] + ' · ' + str(sum(code in record['languages'] for record in records)) + ' Einträge</summary>' + bulk_downloads([record for record in records if code in record['languages']], 'sprache-' + code, category_labels, subgroup_labels) + '<ul class="index-links">' + ''.join(index_link(record) for record in records if code in record['languages']) + '</ul></details>' for code in language_codes)
+    language_register = ''.join('<details id="sprache-' + code + '"><summary>' + LANGUAGES[code] + ' · ' + str(sum(code in record['languages'] for record in records)) + ' Einträge</summary>' + bulk_downloads([record for record in chronological_records if code in record['languages']], 'sprache-' + code, category_labels, subgroup_labels) + '<ul class="index-links">' + ''.join(index_link(record) for record in chronological_records if code in record['languages']) + '</ul></details>' for code in language_codes)
     year_register = ''.join('<details id="jahr-' + str(year) + '"><summary>' + str(year) + ' · ' + str(sum(record['publication_year'] == year for record in records)) + ' Einträge</summary>' + bulk_downloads([record for record in records if record['publication_year'] == year], 'jahr-' + str(year), category_labels, subgroup_labels) + '<ul class="index-links">' + ''.join(index_link(record) for record in records if record['publication_year'] == year) + '</ul></details>' for year in years)
     editions = {}
     for record in records:
@@ -215,9 +227,13 @@ def build_page(dataset):
     header = '<header><p class="eyebrow">Alexander von Humboldt · Bibliographie</p><h1>' + escape(title) + '</h1><p class="intro">Zusammengestellt von Tobias Kraft und Ulrich Päßler (BBAW).</p><p class="status">262 Einträge · 7 Kategorien · Stand 13.10.2026</p>' + selection
     header += '<div class="header-actions"><a href="#bibliographie">Zur Bibliographie ↓</a><a href="#sprachregister">Sprachen</a><a href="#jahresregister">Jahre</a><a href="#downloads">Gesamtdownloads</a></div>'
     header += '<p class="publication">Die Bibliographie wurde parallel als Teil der Sondernummer der <em>HiN</em> zum 70. Geburtstag von Ottmar Ette im Dezember 2026 online veröffentlicht (<a href="https://www.hin-online.de/">www.hin-online.de</a>).</p>'
-    header += '<p class="hint">Diese Datei enthält die gesamte Ansicht und alle Downloads. Offline nutzbar, ohne JavaScript. Nur die verlinkten Originalpublikationen und Medien benötigen Internet.</p></header>'
+    header += '<p class="hint">Offline nutzbar, ohne JavaScript. Eingebettete Downloads können auf Smartphones eingeschränkt sein; dafür stehen im Abschnitt „Gesamtdaten“ direkte Dateilinks und ein ZIP-Paket bereit.</p></header>'
     footer = '<footer><p>Daten und projektspezifische Webinhalte: <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Die Lizenz gilt nicht für verlinkte Inhalte Dritter.</p><p>Die HTML-Ansicht übernimmt die redaktionelle Auswahl der Bibliographie. Sprachzuordnungen sind teils anhand der bibliographischen Angaben erschlossen. Der Datensatz dokumentiert die Zuordnungsgrundlagen.</p><div class="footer-links"><a href="#seitenanfang">Zurück zur Navigation ↑</a><a href="#sprachregister">Sprachregister</a><a href="#jahresregister">Jahresregister</a><a href="#weitere-ausgaben">Weitere Ausgaben</a><a href="#downloads">Gesamtdaten</a></div></footer>'
-    return '<!doctype html>\n<html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Bibliographie der Publikationen von Ottmar Ette zu Alexander von Humboldt mit Kategorien-, Sprach- und Jahresregistern sowie RIS- und CSL-JSON-Export."><title>' + escape(title) + '</title><style>' + CSS + '</style></head><body id="seitenanfang"><a class="skip" href="#bibliographie">Zur Bibliographie</a>' + header + '<div class="layout">' + navigation + '<main id="bibliographie">' + ''.join(sections) + registers + downloads + '</main></div>' + footer + '</body></html>\n'
+    direct_files = '<div class="direct-files"><h3>Dateien für Smartphone und Desktop</h3><p>Falls eingebettete Downloads nicht funktionieren: Datei öffnen und über das Browsermenü speichern oder teilen. Auf dem iPhone gegebenenfalls „In Dateien sichern“ wählen.</p><ul><li><a href="exports/bibliographie-downloads.zip" download>ZIP-Paket mit allen vier Gesamtformaten herunterladen</a></li><li><a href="exports/bibliographie.csl.json">CSL-JSON-Datei öffnen</a></li><li><a href="exports/bibliographie.ris">RIS-Datei öffnen</a></li><li><a href="data/bibliographie.csv">CSV-Datei öffnen</a></li><li><a href="data/bibliographie.json">JSON-Projektdatensatz öffnen</a></li></ul><p class="hint">Diese Dateilinks benötigen die veröffentlichte Webseite oder die zugehörigen lokalen Ordner. Die eingebetteten Downloads funktionieren auch in der allein gespeicherten HTML-Datei, soweit der Browser sie unterstützt.</p></div>'
+    downloads = downloads.replace('<div class="download-group">', direct_files + '<h3>Eingebettete Offline-Downloads</h3><div class="download-group">', 1)
+    downloads = downloads.replace('Importe in Zotero, EndNote und Citavi sind noch nicht praktisch geprüft.', 'Der Bearbeiter hat RIS-Importe in Zotero und Citavi geprüft; abgesehen von der inzwischen korrigierten Notizaufteilung wurden dabei keine Fehler beobachtet. EndNote wurde nicht getestet.')
+    footer = footer.replace('<div class="footer-links">', '<p><a href="https://github.com/trafikante/AvH-Bibliographie-Ette">Rohdatensatz, Erstellungsdokumentation und Korrekturhinweise im GitHub-Repository</a></p><div class="footer-links">')
+    return '<!doctype html>\n<html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Bibliographie der Publikationen von Ottmar Ette zu Alexander von Humboldt mit Kategorien-, Sprach- und Jahresregistern sowie RIS- und CSL-JSON-Export."><title>' + escape(title) + '</title><style>' + CSS + '</style></head><body id="seitenanfang" tabindex="-1"><a class="skip" href="#bibliographie">Zur Bibliographie</a>' + header + '<div class="layout">' + navigation + '<main id="bibliographie" tabindex="-1">' + ''.join(sections) + registers + downloads + '</main></div>' + footer + '</body></html>\n'
 
 
 def validate(page, dataset):
@@ -247,10 +263,12 @@ def validate(page, dataset):
         assert csl == [csl_record(record)]
         ris = payloads[record['id'] + '.ris']
         assert ris.count('TY  - ') == ris.count('ER  - ') == 1
+        assert ris.count('\r\nN1  - ') == 1
+        assert '\r\nN1  - Vollständige Literaturangabe:\r\n      ' in ris
         assert 'ID  - ' + record['id'] + '\r\n' in ris
         assert all(resource['url'] in ris for resource in record.get('online_resources', []))
         assert not article.xpath('.//details')
-    downloads = tree.get_element_by_id('downloads').xpath('.//a[@download]')
+    downloads = tree.get_element_by_id('downloads').xpath('.//a[@download and starts-with(@href, "data:")]')
     payloads = {link.get('download'): base64.b64decode(link.get('href').split(',', 1)[1]).decode('utf-8') for link in downloads}
     assert len(json.loads(payloads['bibliographie.csl.json'])) == len(records)
     assert payloads['bibliographie.ris'].count('TY  - ') == len(records)
@@ -274,13 +292,17 @@ def validate(page, dataset):
         links = element.xpath('./a[@download]')
         assert len(links) == 2
         expected_records = expected_groups[group]
+        if group.startswith('sprache-'):
+            expected_records = sorted(expected_records, key=lambda record: (record['publication_year'], record['source_order']))
+            register_links = tree.get_element_by_id(group).xpath('./ul/li/a/@href')
+            assert register_links == ['#' + record['id'] for record in expected_records]
         group_payloads = {link.get('download'): base64.b64decode(link.get('href').split(',', 1)[1]).decode('utf-8') for link in links}
         assert json.loads(group_payloads[group + '.json']) == [csl_record(record) for record in expected_records]
         assert group_payloads[group + '.ris'] == ''.join(ris_record(record, category_labels, subgroup_labels) for record in expected_records)
     return {'records': len(records), 'single_exports': len(records) * 2, 'complete_exports': len(downloads),
             'bulk_groups': len(group_elements), 'bulk_exports': len(group_elements) * 2,
             'javascript': False, 'external_assets': False, 'source_text_preserved': True,
-            'internal_links_valid': True, 'download_payloads_checked': True, 'bytes_utf8': len(page.encode('utf-8'))}
+            'internal_links_valid': True, 'download_payloads_checked': True, 'language_registers_chronological': True, 'single_ris_note': True, 'bytes_utf8': len(page.encode('utf-8'))}
 
 
 def main():
@@ -307,7 +329,17 @@ def main():
         (exports / 'bibliographie.csl.json').write_text(json.dumps([csl_record(record) for record in dataset['records']], ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
         with (exports / 'bibliographie.ris').open('w', encoding='utf-8', newline='') as handle:
             handle.write(''.join(ris_record(record, labels, sublabels) for record in dataset['records']))
+        with zipfile.ZipFile(exports / 'bibliographie-downloads.zip', 'w', zipfile.ZIP_DEFLATED) as archive:
+            for filename in ['exports/bibliographie.csl.json', 'exports/bibliographie.ris', 'data/bibliographie.csv', 'data/bibliographie.json', 'LIZENZ.md', 'LICENSE']:
+                archive.write(PROJECT / filename, Path(filename).name)
         (PROJECT / 'data/web-pruefung.json').write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+    with zipfile.ZipFile(PROJECT / 'exports/bibliographie-downloads.zip') as archive:
+        assert archive.testzip() is None
+        for filename in ['exports/bibliographie.csl.json', 'exports/bibliographie.ris', 'data/bibliographie.csv', 'data/bibliographie.json', 'LIZENZ.md', 'LICENSE']:
+            assert archive.read(Path(filename).name) == (PROJECT / filename).read_bytes()
+    for href in html_parser.fromstring(page).xpath('//a/@href'):
+        if not href.startswith(('#', 'https://', 'http://', 'data:')):
+            assert (PROJECT / href).is_file(), href
     print(json.dumps(report, ensure_ascii=False, indent=2))
 
 

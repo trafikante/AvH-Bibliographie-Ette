@@ -14,7 +14,9 @@
       "URL/DOI: Die Online-Verweise wurden am 12.10.2026 geprüft und anhand bestätigter Fundstellen aktualisiert. "
     ],
     "license": "CC-BY-4.0",
-    "license_url": "https://creativecommons.org/licenses/by/4.0/"
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "publication_status": "released",
+    "review_note": "Vom Bearbeiter anhand zahlreicher Einträge und Importtests geprüft und zur Publikation freigegeben; keine behauptete Einzelprüfung sämtlicher Metadaten."
   },
   "categories": [
     {
@@ -123,7 +125,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -192,7 +194,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -265,7 +267,7 @@
       "notes": [
         "Die digitale URL gehört zur Ausgabe von 2005; Hauptjahr dieses Eintrags bleibt 2002."
       ],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -331,7 +333,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -394,7 +396,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -451,7 +453,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -508,7 +510,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -591,7 +593,7 @@
         }
       ],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -692,7 +694,7 @@
       ],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -784,7 +786,7 @@
       ],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -867,7 +869,7 @@
       ],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -944,7 +946,7 @@
       ],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -1016,7 +1018,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -1074,7 +1076,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -1156,7 +1158,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -1230,7 +1232,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -1291,7 +1293,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -1352,7 +1354,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -1427,7 +1429,7 @@
         }
       ],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -1510,7 +1512,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -1574,7 +1576,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -1656,7 +1658,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -1722,7 +1724,7 @@
       "notes": [
         "Die Sprache eines ganzen Sammelbandes ist aus seinem deutschen Titel nicht sicher bestimmbar."
       ],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -1793,7 +1795,7 @@
       "notes": [
         "Publikationssprachen eines ganzen Herausgeberbandes/Heftes aus dem Titel allein nicht sicher feststellbar."
       ],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -1863,7 +1865,7 @@
         "Publikationssprachen eines ganzen Herausgeberbandes/Heftes aus dem Titel allein nicht sicher feststellbar.",
         "Zeitschriftendossier gemäß Nutzerentscheidung wie Sammelband erfasst; Zeitschrift, Band und Heft bleiben erhalten."
       ],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -1938,7 +1940,7 @@
         "Publikationssprachen eines ganzen Herausgeberbandes/Heftes aus dem Titel allein nicht sicher feststellbar.",
         "Zeitschriftendossier gemäß Nutzerentscheidung wie Sammelband erfasst; Zeitschrift, Band und Heft bleiben erhalten."
       ],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -2010,7 +2012,7 @@
       "notes": [
         "Publikationssprachen eines ganzen Herausgeberbandes/Heftes aus dem Titel allein nicht sicher feststellbar."
       ],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -2073,7 +2075,7 @@
       "notes": [
         "Publikationssprachen eines ganzen Herausgeberbandes/Heftes aus dem Titel allein nicht sicher feststellbar."
       ],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -2149,7 +2151,7 @@
       "notes": [
         "Publikationssprachen eines ganzen Herausgeberbandes/Heftes aus dem Titel allein nicht sicher feststellbar."
       ],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -2213,7 +2215,7 @@
       "notes": [
         "Publikationssprachen eines ganzen Herausgeberbandes/Heftes aus dem Titel allein nicht sicher feststellbar."
       ],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -2272,7 +2274,7 @@
       "notes": [
         "Publikationssprachen eines ganzen Herausgeberbandes/Heftes aus dem Titel allein nicht sicher feststellbar."
       ],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -2332,7 +2334,7 @@
       "notes": [
         "Zeitschriftendossier gemäß Nutzerentscheidung wie Sammelband erfasst; Zeitschrift, Band und Heft bleiben erhalten."
       ],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -2400,7 +2402,7 @@
         "Redaktionell Sammelbände, bibliographisch Zeitschriftendossier. Herausgeberangabe aus der finalen Quelle übernommen; keine unabhängige Rollenprüfung.",
         "Zeitschriftendossier gemäß Nutzerentscheidung wie Sammelband erfasst; Zeitschrift, Band und Heft bleiben erhalten."
       ],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -2473,7 +2475,7 @@
       "notes": [
         "Publikationssprachen eines ganzen Herausgeberbandes/Heftes aus dem Titel allein nicht sicher feststellbar."
       ],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -2530,7 +2532,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -2601,7 +2603,7 @@
       "notes": [
         "CSL book mit medium Audio-CD; späterer RIS-Export benötigt eine geprüfte Hörbuch-Zuordnung."
       ],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -2672,7 +2674,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -2722,7 +2724,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -2789,7 +2791,7 @@
         "Redaktionsleitung und Konzept: Tobias Kraft, ausdrücklich im Quellenabsatz genannt.",
         "Quelle nennt vier Sprachen, benennt die vier Sprachfassungen jedoch nicht. Keine ungesicherte Liste ergänzt."
       ],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -2854,7 +2856,7 @@
         "Verlag ist im Quellenabsatz nicht angegeben.",
         "Impressum nicht vollständig separat erschlossen; vollständige Quellenangabe bleibt erhalten."
       ],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -2921,7 +2923,7 @@
       "notes": [
         "Herausgeberliste ist in der Quelle mit et al. abgekürzt; keine fehlenden Personen ergänzt."
       ],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -2998,7 +3000,7 @@
         }
       ],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -3075,7 +3077,7 @@
         }
       ],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -3140,7 +3142,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -3198,7 +3200,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -3256,7 +3258,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -3323,7 +3325,7 @@
       "notes": [
         "Zusätzlicher Diskussionsbeitrag auf S. 80; Hauptseiten 241–252 separat erfasst."
       ],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -3381,7 +3383,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -3439,7 +3441,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -3504,7 +3506,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -3577,7 +3579,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -3642,7 +3644,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -3706,7 +3708,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -3764,7 +3766,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -3822,7 +3824,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -3880,7 +3882,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -3938,7 +3940,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -3996,7 +3998,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -4054,7 +4056,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -4123,7 +4125,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -4182,7 +4184,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -4264,7 +4266,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -4330,7 +4332,7 @@
       "notes": [
         "Sonderheft-/Dossiertitel und Kontext sind in der vollständigen Quellenangabe erhalten."
       ],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -4404,7 +4406,7 @@
         }
       ],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -4478,7 +4480,7 @@
         }
       ],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -4537,7 +4539,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -4611,7 +4613,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -4676,7 +4678,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -4758,7 +4760,7 @@
         }
       ],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -4817,7 +4819,7 @@
       "notes": [
         "Sonderheft-/Dossiertitel und Kontext sind in der vollständigen Quellenangabe erhalten."
       ],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -4882,7 +4884,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -4941,7 +4943,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -5011,7 +5013,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -5076,7 +5078,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -5141,7 +5143,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -5214,7 +5216,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -5292,7 +5294,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -5361,7 +5363,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -5447,7 +5449,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -5503,7 +5505,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -5593,7 +5595,7 @@
         }
       ],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -5684,7 +5686,7 @@
         }
       ],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -5743,7 +5745,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -5817,7 +5819,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -5875,7 +5877,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -5940,7 +5942,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -5998,7 +6000,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -6057,7 +6059,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -6126,7 +6128,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -6203,7 +6205,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -6265,7 +6267,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -6340,7 +6342,7 @@
         }
       ],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -6409,7 +6411,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -6467,7 +6469,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -6525,7 +6527,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -6584,7 +6586,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -6646,7 +6648,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -6705,7 +6707,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -6771,7 +6773,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -6840,7 +6842,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -6909,7 +6911,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -6978,7 +6980,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -7059,7 +7061,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -7118,7 +7120,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -7194,7 +7196,7 @@
         }
       ],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -7259,7 +7261,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -7314,7 +7316,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -7370,7 +7372,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -7433,7 +7435,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -7513,7 +7515,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -7570,7 +7572,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -7646,7 +7648,7 @@
       "notes": [
         "Sonderheft-/Dossiertitel und Kontext sind in der vollständigen Quellenangabe erhalten."
       ],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -7708,7 +7710,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -7766,7 +7768,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -7839,7 +7841,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -7912,7 +7914,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -7971,7 +7973,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -8041,7 +8043,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -8106,7 +8108,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -8187,7 +8189,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -8251,7 +8253,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -8315,7 +8317,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -8373,7 +8375,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -8472,7 +8474,7 @@
         }
       ],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -8539,7 +8541,7 @@
       "notes": [
         "Sonderheft-/Dossiertitel und Kontext sind in der vollständigen Quellenangabe erhalten."
       ],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -8619,7 +8621,7 @@
       "notes": [
         "Seiten nicht zusammenhängend: xvi sowie die geraden Seiten 2–16. Silvia Kruse ist im Nachweis Übersetzerin des Buches; keine Übertragung dieser Rolle auf den deutschen Beitrag."
       ],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -8697,7 +8699,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -8763,7 +8765,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -8828,7 +8830,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -8887,7 +8889,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -8957,7 +8959,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -9022,7 +9024,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -9091,7 +9093,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -9156,7 +9158,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -9214,7 +9216,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -9292,7 +9294,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -9351,7 +9353,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -9415,7 +9417,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -9511,7 +9513,7 @@
         }
       ],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -9569,7 +9571,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -9642,7 +9644,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -9699,7 +9701,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -9768,7 +9770,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -9827,7 +9829,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -9897,7 +9899,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -9956,7 +9958,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -10030,7 +10032,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -10086,7 +10088,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -10150,7 +10152,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -10223,7 +10225,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -10282,7 +10284,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -10352,7 +10354,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -10409,7 +10411,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -10468,7 +10470,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -10547,7 +10549,7 @@
         }
       ],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -10604,7 +10606,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -10670,7 +10672,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -10732,7 +10734,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -10818,7 +10820,7 @@
         }
       ],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -10892,7 +10894,7 @@
         }
       ],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -10951,7 +10953,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -11016,7 +11018,7 @@
       "notes": [
         "Sonderheft-/Dossiertitel und Kontext sind in der vollständigen Quellenangabe erhalten."
       ],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -11074,7 +11076,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -11133,7 +11135,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -11212,7 +11214,7 @@
         }
       ],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -11286,7 +11288,7 @@
         }
       ],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -11369,7 +11371,7 @@
         }
       ],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -11452,7 +11454,7 @@
         }
       ],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -11511,7 +11513,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -11586,7 +11588,7 @@
         }
       ],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -11656,7 +11658,7 @@
         }
       ],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -11726,7 +11728,7 @@
         }
       ],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -11796,7 +11798,7 @@
         }
       ],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -11873,7 +11875,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -11942,7 +11944,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -12008,7 +12010,7 @@
       "notes": [
         "Russischer Titel in Quellenumschrift; ʹ bleibt U+02B9. Englischer Paralleltitel ist keine zweite Publikationssprache."
       ],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -12067,7 +12069,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -12141,7 +12143,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -12199,7 +12201,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -12258,7 +12260,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -12319,7 +12321,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -12390,7 +12392,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -12454,7 +12456,7 @@
       "notes": [
         "Sonderheft-/Dossiertitel und Kontext sind in der vollständigen Quellenangabe erhalten."
       ],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -12553,7 +12555,7 @@
         }
       ],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -12622,7 +12624,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -12699,7 +12701,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -12764,7 +12766,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -12821,7 +12823,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -12894,7 +12896,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -12967,7 +12969,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -13032,7 +13034,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -13097,7 +13099,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -13156,7 +13158,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -13244,7 +13246,7 @@
         }
       ],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -13318,7 +13320,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -13395,7 +13397,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -13464,7 +13466,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -13533,7 +13535,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -13606,7 +13608,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -13667,7 +13669,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -13726,7 +13728,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -13794,7 +13796,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -13876,7 +13878,7 @@
         }
       ],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -13935,7 +13937,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -14003,7 +14005,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -14094,7 +14096,7 @@
         }
       ],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -14167,7 +14169,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -14262,7 +14264,7 @@
         }
       ],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -14325,7 +14327,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -14395,7 +14397,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -14460,7 +14462,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -14525,7 +14527,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -14619,7 +14621,7 @@
         }
       ],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -14680,7 +14682,7 @@
       "notes": [
         "Publish.UP-DOI bezeichnet das Gesamt-Heft; kein Artikel-DOI."
       ],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -14770,7 +14772,7 @@
         }
       ],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -14854,7 +14856,7 @@
         }
       ],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -14945,7 +14947,7 @@
         }
       ],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -15003,7 +15005,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -15078,7 +15080,7 @@
         }
       ],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -15147,7 +15149,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -15218,7 +15220,7 @@
         }
       ],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -15283,7 +15285,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -15353,7 +15355,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -15434,7 +15436,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -15499,7 +15501,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -15577,7 +15579,7 @@
         }
       ],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -15679,7 +15681,7 @@
         }
       ],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -15757,7 +15759,7 @@
         }
       ],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -15840,7 +15842,7 @@
         }
       ],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -15923,7 +15925,7 @@
         }
       ],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -15993,7 +15995,7 @@
         }
       ],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -16063,7 +16065,7 @@
         }
       ],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -16124,7 +16126,7 @@
       "notes": [
         "Gesamtbeitrag mit Rede: S. 15–22."
       ],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -16190,7 +16192,7 @@
       "notes": [
         "Gesamtbeitrag mit Rede: S. 23–30."
       ],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -16272,7 +16274,7 @@
       "notes": [
         "David Jacobson wird in der Quelle als Übersetzer des englischen Anhangs genannt, nicht als Übersetzer des hier erfassten Beitrags."
       ],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -16343,7 +16345,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -16447,7 +16449,7 @@
         }
       ],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -16505,7 +16507,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -16577,7 +16579,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -16635,7 +16637,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -16707,7 +16709,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -16793,7 +16795,7 @@
         }
       ],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -16850,7 +16852,7 @@
       "related_editions": [],
       "relations": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -16910,7 +16912,7 @@
       "relations": [],
       "contributors": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -16983,7 +16985,7 @@
       "relations": [],
       "contributors": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -17055,7 +17057,7 @@
         }
       ],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -17134,7 +17136,7 @@
         }
       ],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -17206,7 +17208,7 @@
         }
       ],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -17271,7 +17273,7 @@
         }
       ],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -17336,7 +17338,7 @@
       "relations": [],
       "contributors": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -17401,7 +17403,7 @@
       "relations": [],
       "contributors": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -17489,7 +17491,7 @@
         }
       ],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -17554,7 +17556,7 @@
       "relations": [],
       "contributors": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -17627,7 +17629,7 @@
         }
       ],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -17699,7 +17701,7 @@
         }
       ],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -17772,7 +17774,7 @@
         }
       ],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -17844,7 +17846,7 @@
         }
       ],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -17915,7 +17917,7 @@
         }
       ],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -17980,7 +17982,7 @@
       "relations": [],
       "contributors": [],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -18051,7 +18053,7 @@
       "notes": [
         "Separater redaktioneller Nachweis der Überarbeitung und teilweisen Neuübersetzung. Rollenname wird nicht ohne ausdrückliche Angabe im Quellenabsatz ergänzt."
       ],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -18125,7 +18127,7 @@
       "notes": [
         "Übersetzungsrolle von Ette aus der redaktionellen Kategorie erschließbar; im Einzelabsatz nicht explizit benannt."
       ],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",
@@ -18200,7 +18202,7 @@
         }
       ],
       "notes": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "source": {
         "file": "bibliographie_ette_final_v2.docx",
         "sha256": "6b9ca6cc0be1c4254736211d4b642a346fa51202b62d68c6825771e1a768de92",

@@ -1,5 +1,15 @@
 # Veröffentlichung auf GitHub und GitHub Pages
 
+## Inhalt
+
+- [1. Was du veröffentlichst](#1-was-du-veröffentlichst)
+- [2. Empfohlen: GitHub Desktop](#2-empfohlen-github-desktop)
+- [3. Alternative: nur im Browser](#3-alternative-nur-im-browser)
+- [4. GitHub Pages aktivieren – für beide Varianten](#4-github-pages-aktivieren--für-beide-varianten)
+- [5. Einmal vollständig kontrollieren](#5-einmal-vollständig-kontrollieren)
+- [6. Später pflegen – Desktop und VS Code kombinieren](#6-später-pflegen--desktop-und-vs-code-kombinieren)
+- [7. Optional: eine zitierbare Version markieren](#7-optional-eine-zitierbare-version-markieren)
+
 Diese Anleitung veröffentlicht das vorhandene Projekt als öffentliches Repository **AvH-Bibliographie-Ette** und stellt die fertige HTML-Datei als Webseite bereit. Sie benötigt weder Python noch eine JavaScript-Anwendung. Es wurden hier keine Git-Operationen und keine Uploads ausgeführt.
 
 ## 1. Was du veröffentlichst
@@ -25,7 +35,6 @@ AvH-Bibliographie-Ette/
 ├── UI-ENTSCHEIDUNGEN.md
 ├── WEB-NUTZUNG.md
 ├── Debatten-Medien-Recherche.md
-├── probe.html
 ├── data/
 ├── exports/
 ├── schema/
@@ -36,7 +45,7 @@ AvH-Bibliographie-Ette/
 
 **Aktuelle Daten:** `data/bibliographie.json`, `data/bibliographie.csv`, `exports/bibliographie.csl.json`, `exports/bibliographie.ris`, aktuelles Schema und redaktionelle Festlegungen.
 
-**Nachvollziehbarkeit:** Auch Prüfprotokolle, Recherchebelege, Abgleichdateien, Erfassungsskripte und der gesicherte frühere Erfassungsstand können mit veröffentlicht werden. `probe.html`, `data/probe.*`, das Probenschema und der frühere Gesamterfassungsstand sind historische Arbeitsstände, nicht konkurrierende aktuelle Datensätze. Die README unterscheidet sie ausdrücklich.
+**Nachvollziehbarkeit:** Die Prozessdokumentation, Felddefinitionen und vorhandenen Skripte erläutern das Vorgehen. Historische Probedaten werden für die veröffentlichte Ressource nicht benötigt.
 
 **Nicht hochladen:** `scripts/__pycache__/`, `*.pyc`, Word-Sperrdateien, private Sicherungen, Zugangsdaten oder den übergeordneten Projektordner. `.gitignore` schützt beim Desktop-/Git-Workflow vor einigen temporären Dateien; beim Browserupload musst du sie selbst weglassen.
 
@@ -95,7 +104,7 @@ Das sind erwartete Zieladressen, keine Bestätigung einer bereits erfolgten Ver�
 - Je einen Einzel- und Gruppenexport als RIS und CSL-JSON herunterladen; die Auswahl und die enthaltenen Umlaute beziehungsweise chinesischen Zeichen kontrollieren.
 - Die vier Gesamtdownloads testen. Die tatsächlichen Importe in Zotero, EndNote oder Citavi sind bislang nicht praktisch geprüft.
 - Bei gewünschter Kontrolle ohne Internet die `index.html` herunterladen und lokal öffnen.
-- Lizenzumfang in `LIZENZ.md` beachten: CC BY 4.0 für Daten und eigene Webinhalte, nicht für fremde verlinkte Medien. Für den Programmcode wurde bisher keine gesonderte Softwarelizenz festgelegt.
+- Lizenzumfang in `LIZENZ.md` beachten: CC BY 4.0 für Daten und redaktionelle Webinhalte, MIT für den Programmcode; fremde verlinkte Medien behalten ihre eigenen Rechte.
 
 Wenn Pages 404 zeigt: Branch, `/(root)`, genaue Schreibweise `index.html`, erfolgreiche Bereitstellung und fehlende zusätzliche Ordnerebene prüfen. Die Anzeige kann nach dem Speichern noch etwas Zeit benötigen.
 
@@ -109,7 +118,7 @@ Für spätere Arbeit nutze die Kopie im neuen Repository, nicht gleichzeitig zwe
 4. **Push origin** anklicken. Bei Updates über den Browser vorher den aktuellen Remote-Stand abrufen und übernehmen.
 5. GitHub Pages übernimmt die veröffentlichte neue `index.html` nach erfolgreicher Bereitstellung.
 
-Python brauchst du nur, wenn die HTML-Datei oder Datenerfassung neu aus den strukturierten Dateien erzeugt werden soll. Die Skripte setzen Python mit `python-docx` und `lxml` voraus; die Word-Datei wird lokal im übergeordneten Ordner erwartet. Für den jetzigen Erstupload musst du keines der Skripte ausführen.
+Python brauchst du nur zur Neuerstellung. Der Seitengenerator liest JSON, CSV und `data/web-konfiguration.json` und benötigt Python mit `lxml`, keine Word-Datei. Die ursprünglichen Word-Erfassungsskripte sind davon getrennte projektspezifische Werkzeuge. Für einen Upload der fertigen Dateien musst du keines der Skripte ausführen.
 
 ## 7. Optional: eine zitierbare Version markieren
 
