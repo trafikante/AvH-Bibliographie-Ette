@@ -1,0 +1,707 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AvH-Bibliographie-Ette vollständiger Erfassungsstand",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "dataset",
+    "categories",
+    "records"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "0.2.0"
+    },
+    "dataset": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "title",
+        "status",
+        "created",
+        "record_count",
+        "source_file",
+        "source_sha256"
+      ],
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "status": {
+          "const": "complete-transcription"
+        },
+        "created": {
+          "type": "string"
+        },
+        "record_count": {
+          "type": "integer"
+        },
+        "source_file": {
+          "type": "string"
+        },
+        "source_sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "selection_principles": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "license": {
+          "const": "CC-BY-4.0"
+        },
+        "license_url": {
+          "const": "https://creativecommons.org/licenses/by/4.0/"
+        }
+      }
+    },
+    "categories": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "label",
+          "subcategories"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "label": {
+            "type": "string"
+          },
+          "subcategories": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "label",
+                "source_label"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "label": {
+                  "type": "string"
+                },
+                "source_label": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "records": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "category_id",
+          "subcategory_id",
+          "languages",
+          "language_assessment",
+          "publication_year",
+          "year_basis",
+          "publication_medium",
+          "bibliographic",
+          "parallel_titles",
+          "container_contributors",
+          "related_editions",
+          "relations",
+          "notes",
+          "review_status",
+          "source",
+          "source_order"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^ette-[0-9]{6}$"
+          },
+          "category_id": {
+            "enum": [
+              "literarisches",
+              "akademische-buchpublikationen",
+              "internet-praesentationen",
+              "aufsaetze",
+              "vorworte-lexikonartikel-bibliographien",
+              "debatten",
+              "uebersetzungen"
+            ]
+          },
+          "subcategory_id": {
+            "enum": [
+              null,
+              "monographien",
+              "editionen",
+              "sammelbaende",
+              "didaktische-materialien",
+              "hoerbuecher"
+            ]
+          },
+          "languages": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": {
+              "enum": [
+                "de",
+                "en",
+                "es",
+                "pt",
+                "fr",
+                "ru",
+                "zh",
+                "gl"
+              ]
+            }
+          },
+          "language_assessment": {
+            "type": "object",
+            "required": [
+              "status",
+              "basis"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "status": {
+                "enum": [
+                  "explicit",
+                  "inferred",
+                  "undetermined"
+                ]
+              },
+              "basis": {
+                "type": "string"
+              }
+            }
+          },
+          "publication_year": {
+            "type": "integer",
+            "minimum": 1400,
+            "maximum": 2200
+          },
+          "year_basis": {
+            "enum": [
+              "publication",
+              "online-start"
+            ]
+          },
+          "publication_medium": {
+            "enum": [
+              "text",
+              "audio",
+              "website",
+              "video"
+            ]
+          },
+          "bibliographic": {
+            "type": "object",
+            "required": [
+              "id",
+              "type",
+              "title",
+              "issued"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "type": {
+                "enum": [
+                  "article-journal",
+                  "article-newspaper",
+                  "book",
+                  "chapter",
+                  "periodical",
+                  "webpage",
+                  "article-magazine",
+                  "broadcast"
+                ]
+              },
+              "issued": {
+                "type": "object",
+                "required": [
+                  "date-parts"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "date-parts": {
+                    "type": "array",
+                    "minItems": 1,
+                    "maxItems": 1,
+                    "items": {
+                      "type": "array",
+                      "minItems": 1,
+                      "maxItems": 3,
+                      "items": {
+                        "type": "integer",
+                        "minimum": 1,
+                        "maximum": 2100
+                      }
+                    }
+                  }
+                }
+              },
+              "title": {
+                "type": "string"
+              },
+              "container-title": {
+                "type": "string"
+              },
+              "publisher": {
+                "type": "string"
+              },
+              "publisher-place": {
+                "type": "string"
+              },
+              "collection-title": {
+                "type": "string"
+              },
+              "collection-number": {
+                "type": "string"
+              },
+              "number-of-pages": {
+                "type": "string"
+              },
+              "number-of-volumes": {
+                "type": "string"
+              },
+              "volume": {
+                "type": "string"
+              },
+              "issue": {
+                "type": "string"
+              },
+              "page": {
+                "type": "string"
+              },
+              "medium": {
+                "type": "string"
+              },
+              "dimensions": {
+                "type": "string"
+              },
+              "note": {
+                "type": "string"
+              },
+              "language": {
+                "type": "string"
+              },
+              "DOI": {
+                "type": "string"
+              },
+              "URL": {
+                "type": "string"
+              },
+              "author": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "family": {
+                      "type": "string"
+                    },
+                    "given": {
+                      "type": "string"
+                    },
+                    "non-dropping-particle": {
+                      "type": "string"
+                    },
+                    "literal": {
+                      "type": "string"
+                    }
+                  },
+                  "additionalProperties": false
+                }
+              },
+              "editor": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "family": {
+                      "type": "string"
+                    },
+                    "given": {
+                      "type": "string"
+                    },
+                    "non-dropping-particle": {
+                      "type": "string"
+                    },
+                    "literal": {
+                      "type": "string"
+                    }
+                  },
+                  "additionalProperties": false
+                }
+              },
+              "translator": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "family": {
+                      "type": "string"
+                    },
+                    "given": {
+                      "type": "string"
+                    },
+                    "non-dropping-particle": {
+                      "type": "string"
+                    },
+                    "literal": {
+                      "type": "string"
+                    }
+                  },
+                  "additionalProperties": false
+                }
+              },
+              "narrator": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "family": {
+                      "type": "string"
+                    },
+                    "given": {
+                      "type": "string"
+                    },
+                    "non-dropping-particle": {
+                      "type": "string"
+                    },
+                    "literal": {
+                      "type": "string"
+                    }
+                  },
+                  "additionalProperties": false
+                }
+              },
+              "version": {
+                "type": "string"
+              }
+            }
+          },
+          "parallel_titles": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "language",
+                "text",
+                "status"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "language": {
+                  "enum": [
+                    "de",
+                    "en",
+                    "es",
+                    "pt",
+                    "fr",
+                    "ru",
+                    "zh",
+                    "gl"
+                  ]
+                },
+                "text": {
+                  "type": "string"
+                },
+                "status": {
+                  "const": "source-parallel-title"
+                }
+              }
+            }
+          },
+          "container_contributors": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "author": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "family": {
+                      "type": "string"
+                    },
+                    "given": {
+                      "type": "string"
+                    },
+                    "non-dropping-particle": {
+                      "type": "string"
+                    },
+                    "literal": {
+                      "type": "string"
+                    }
+                  },
+                  "additionalProperties": false
+                }
+              },
+              "editor": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "family": {
+                      "type": "string"
+                    },
+                    "given": {
+                      "type": "string"
+                    },
+                    "non-dropping-particle": {
+                      "type": "string"
+                    },
+                    "literal": {
+                      "type": "string"
+                    }
+                  },
+                  "additionalProperties": false
+                }
+              },
+              "translator": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "family": {
+                      "type": "string"
+                    },
+                    "given": {
+                      "type": "string"
+                    },
+                    "non-dropping-particle": {
+                      "type": "string"
+                    },
+                    "literal": {
+                      "type": "string"
+                    }
+                  },
+                  "additionalProperties": false
+                }
+              }
+            }
+          },
+          "related_editions": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "publication_year",
+                "label",
+                "source_paragraph",
+                "citation_text"
+              ],
+              "properties": {
+                "publication_year": {
+                  "type": "integer"
+                },
+                "label": {
+                  "type": "string"
+                },
+                "source_paragraph": {
+                  "type": "integer"
+                },
+                "citation_text": {
+                  "type": "string"
+                },
+                "url": {
+                  "type": "string"
+                },
+                "publication_years": {
+                  "type": "array",
+                  "items": {
+                    "type": "integer"
+                  }
+                }
+              }
+            }
+          },
+          "relations": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "type",
+                "target_id"
+              ],
+              "properties": {
+                "type": {
+                  "enum": [
+                    "same-publication",
+                    "part-of"
+                  ]
+                },
+                "target_id": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "notes": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "review_status": {
+            "enum": [
+              "draft",
+              "reviewed"
+            ]
+          },
+          "source": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "file",
+              "sha256",
+              "paragraph_numbers",
+              "paragraphs",
+              "citation_text",
+              "citation_html"
+            ],
+            "properties": {
+              "file": {
+                "type": "string"
+              },
+              "sha256": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              },
+              "paragraph_numbers": {
+                "type": "array",
+                "minItems": 1,
+                "uniqueItems": true,
+                "items": {
+                  "type": "integer",
+                  "minimum": 1
+                }
+              },
+              "paragraphs": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "citation_text": {
+                "type": "string"
+              },
+              "citation_html": {
+                "type": "string"
+              }
+            }
+          },
+          "source_order": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "online_resources": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "url",
+                "basis"
+              ],
+              "properties": {
+                "url": {
+                  "type": "string"
+                },
+                "basis": {
+                  "const": "current-source"
+                }
+              },
+              "additionalProperties": false
+            }
+          },
+          "contributors": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "role",
+                "name"
+              ],
+              "properties": {
+                "role": {
+                  "enum": [
+                    "participant",
+                    "interviewer",
+                    "moderator"
+                  ]
+                },
+                "name": {
+                  "type": "object",
+                  "properties": {
+                    "family": {
+                      "type": "string"
+                    },
+                    "given": {
+                      "type": "string"
+                    },
+                    "non-dropping-particle": {
+                      "type": "string"
+                    },
+                    "literal": {
+                      "type": "string"
+                    }
+                  },
+                  "additionalProperties": false
+                }
+              },
+              "additionalProperties": false
+            }
+          }
+        },
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "category_id": {
+                  "const": "akademische-buchpublikationen"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "subcategory_id": {
+                  "enum": [
+                    "monographien",
+                    "editionen",
+                    "sammelbaende",
+                    "didaktische-materialien",
+                    "hoerbuecher"
+                  ]
+                }
+              }
+            },
+            "else": {
+              "properties": {
+                "subcategory_id": {
+                  "type": "null"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}
