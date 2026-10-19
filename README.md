@@ -34,7 +34,7 @@ Die Versions-DOI bezeichnet den am 15.10.2026 archivierten Stand. Die laufende W
 
 ## Wie ist die Ressource entstanden?
 
-Die Ressource entstand in einer schrittweisen Zusammenarbeit zwischen dem fachlich verantwortlichen Bearbeiter und einem KI-Agenten in Codex Desktop: Regeln vereinbaren, eine Probe prüfen, die Word-Vorlage mit Python erschließen, fachliche Zweifelsfälle entscheiden und Daten, HTML sowie Exporte kontrollieren. Vollständige Literaturangaben, Kursivierungen und Links blieben erhalten.
+Die Ressource entstand in einer schrittweisen Zusammenarbeit zwischen Tobias Kraft (BBAW) und einem KI-Agenten in Codex Desktop: Regeln vereinbaren, eine Probe prüfen, die Word-Vorlage mit Python erschließen, fachliche Zweifelsfälle entscheiden und Daten, HTML sowie Exporte kontrollieren. Vollständige Literaturangaben, Kursivierungen und Links blieben erhalten.
 
 **[→ Entstehungsprozess und technische Nachnutzung](ERSTELLUNG-UND-NACHNUTZUNG.md)**
 
