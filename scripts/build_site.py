@@ -152,6 +152,40 @@ def download(label, filename, content, mime, context=None):
     return '<a class="download" aria-label="' + escape(label + ' herunterladen: ' + (context or filename)) + '" download="' + escape(filename) + '" href="data:' + mime + ';charset=utf-8;base64,' + payload + '">' + escape(label) + '</a>'
 
 
+def linked_citation(record):
+    fragment = html_parser.fragment_fromstring(record['source']['citation_html'], create_parent='div')
+    urls = sorted({resource['url'] for resource in record.get('online_resources', [])
+                   if resource['url'].startswith(('https://', 'http://'))}, key=len, reverse=True)
+    if not urls:
+        return record['source']['citation_html']
+    pattern = re.compile('|'.join(re.escape(url) for url in urls))
+    changed = False
+    # Link only text outside existing anchors; punctuation and inline markup stay intact.
+    for node in fragment.xpath('.//text()[not(ancestor::a)]'):
+        matches = list(pattern.finditer(str(node)))
+        if not matches:
+            continue
+        changed = True
+        owner = node.getparent()
+        if node.is_tail:
+            parent = owner.getparent()
+            position = parent.index(owner) + 1
+            owner.tail = str(node)[:matches[0].start()]
+        else:
+            parent = owner
+            position = 0
+            owner.text = str(node)[:matches[0].start()]
+        for index, match in enumerate(matches):
+            link = html_parser.Element('a', href=match.group())
+            link.text = match.group()
+            end = matches[index + 1].start() if index + 1 < len(matches) else len(node)
+            link.tail = str(node)[match.end():end]
+            parent.insert(position + index, link)
+    if not changed:
+        return record['source']['citation_html']
+    return escape(fragment.text or '') + ''.join(html_parser.tostring(child, encoding='unicode') for child in fragment)
+
+
 def index_link(record, edition=None):
     metadata = record['bibliographic']
     title = metadata['title']
@@ -235,7 +269,7 @@ def build_page(dataset):
             ris = ris_record(record, category_labels, subgroup_labels)
             csl = json.dumps([csl_record(record)], ensure_ascii=False, indent=2) + '\n'
             actions = download('RIS', record['id'] + '.ris', ris, 'application/x-research-info-systems', record['bibliographic']['title']) + download('CSL-JSON', record['id'] + '.json', csl, 'application/json', record['bibliographic']['title']) + '<a class="back" href="#seitenanfang">Zurück zur Navigation ↑</a>'
-            content.append('<article id="' + record['id'] + '" aria-label="' + escape(record['bibliographic']['title']) + '"><div class="entry-meta">' + meta + '</div><p class="citation">' + record['source']['citation_html'] + '</p><div class="entry-actions">' + actions + '</div></article>')
+            content.append('<article id="' + record['id'] + '" aria-label="' + escape(record['bibliographic']['title']) + '"><div class="entry-meta">' + meta + '</div><p class="citation">' + linked_citation(record) + '</p><div class="entry-actions">' + actions + '</div></article>')
         category_exports = bulk_downloads([record for record in records if record['category_id'] == category['id']], 'kategorie-' + category['id'], category_labels, subgroup_labels)
         sections.append('<section class="category-section" id="' + category['id'] + '"><h2 class="section-heading">' + escape(category['label']) + '<span class="count">' + str(counts[category['id']]) + ' Einträge</span></h2>' + category_exports + ''.join(content) + '</section>')
     language_register = ''.join('<details id="sprache-' + code + '"><summary>' + LANGUAGES[code] + ' · ' + str(sum(code in record['languages'] for record in records)) + ' Einträge</summary>' + bulk_downloads([record for record in chronological_records if code in record['languages']], 'sprache-' + code, category_labels, subgroup_labels) + '<ul class="index-links">' + ''.join(index_link(record) for record in chronological_records if code in record['languages']) + '</ul></details>' for code in language_codes)
