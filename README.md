@@ -18,6 +18,16 @@ Für Smartphones stehen [direkte Datendateien und ein ZIP-Paket](https://trafika
 
 ## Zitieren und archivierte Fassung
 
+### HTML-Webseite
+
+Kraft, Tobias; Päßler, Ulrich (2026): *Schriftenverzeichnis: Publikationen von Ottmar Ette zu Alexander von Humboldt*. HTML-Webseite. [https://trafikante.github.io/AvH-Bibliographie-Ette/](https://trafikante.github.io/AvH-Bibliographie-Ette/) (abgerufen am [TT.MM.JJJJ]).
+
+### GitHub-Repository
+
+Kraft, Tobias; Päßler, Ulrich (2026): *Schriftenverzeichnis: Publikationen von Ottmar Ette zu Alexander von Humboldt*. GitHub-Repository. [https://github.com/trafikante/AvH-Bibliographie-Ette](https://github.com/trafikante/AvH-Bibliographie-Ette) (abgerufen am [TT.MM.JJJJ]).
+
+### Archivierte Fassung (Zenodo)
+
 Kraft, Tobias; Päßler, Ulrich (2026): *Schriftenverzeichnis: Publikationen von Ottmar Ette zu Alexander von Humboldt*. Version v1.0.2. Zenodo. [https://doi.org/10.5281/zenodo.23400543](https://doi.org/10.5281/zenodo.23400543).
 
 Die Versions-DOI bezeichnet den am 15.10.2026 archivierten Stand. Die laufende Webseite und das Repository können spätere Änderungen enthalten. Für die Ressource über alle Versionen hinweg steht die [versionsübergreifende DOI](https://doi.org/10.5281/zenodo.23400542) bereit. Maschinenlesbare Zitierangaben: [CITATION.cff](CITATION.cff).
