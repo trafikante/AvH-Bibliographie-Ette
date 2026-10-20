@@ -2,6 +2,7 @@
 
 ## Inhalt
 
+- [Archivierung von v1.1.0 am 20.10.2026](#archivierung-von-v110-am-20102026)
 - [Lokale Suche vom 20.10.2026](#lokale-suche-vom-20102026)
 - [Gültiger Publikationsstand vom 15.10.2026](#gültiger-publikationsstand-vom-15102026)
 - [Vollständige Offline-Webansicht](#vollständige-offline-webansicht)
@@ -13,6 +14,12 @@
 - [Technische Prüfungen](#technische-prüfungen)
 - [Noch fachlich zu prüfen](#noch-fachlich-zu-prüfen)
 - [GitHub](#github)
+
+## Archivierung von v1.1.0 am 20.10.2026
+
+GitHub-Release `v1.1.0` und die `.zenodo.json` des tatsächlichen Tags öffentlich geprüft. Zenodo bestätigt Version `v1.1.0`, Publikationsdatum 20.10.2026, Ressourcentyp Dataset, Tobias Kraft und Ulrich Päßler mit ORCID/GND sowie CC BY 4.0. Archivdatei: `trafikante/AvH-Bibliographie-Ette-v1.1.0.zip`.
+
+Versions-DOI: [10.5281/zenodo.23501331](https://doi.org/10.5281/zenodo.23501331). Versionsübergreifende DOI unverändert: [10.5281/zenodo.23400542](https://doi.org/10.5281/zenodo.23400542). README, `CITATION.cff`, Webkonfiguration und erzeugte HTML-Zitierungen lokal auf die bestätigte Fassung aktualisiert. Historische Nachweise zu v1.0.2 bleiben erhalten. Diese DOI-Nachpflege betrifft das laufende Repository und verändert nicht das bereits archivierte Release. Bibliographische Daten und Exporte unverändert; Generator- und Diff-Prüfung erfolgreich.
 
 ## Lokale Suche vom 20.10.2026
 

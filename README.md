@@ -28,9 +28,9 @@ Kraft, Tobias; Päßler, Ulrich (2026): *Schriftenverzeichnis: Publikationen von
 
 ### Archivierte Fassung (Zenodo)
 
-Kraft, Tobias; Päßler, Ulrich (2026): *Schriftenverzeichnis: Publikationen von Ottmar Ette zu Alexander von Humboldt*. Version v1.0.2. Zenodo. [https://doi.org/10.5281/zenodo.23400543](https://doi.org/10.5281/zenodo.23400543).
+Kraft, Tobias; Päßler, Ulrich (2026): *Schriftenverzeichnis: Publikationen von Ottmar Ette zu Alexander von Humboldt*. Version v1.1.0. Zenodo. [https://doi.org/10.5281/zenodo.23501331](https://doi.org/10.5281/zenodo.23501331).
 
-Die Versions-DOI bezeichnet den am 15.10.2026 archivierten Stand. Die laufende Webseite und das Repository können spätere Änderungen enthalten. Für die Ressource über alle Versionen hinweg steht die [versionsübergreifende DOI](https://doi.org/10.5281/zenodo.23400542) bereit. Maschinenlesbare Zitierangaben: [CITATION.cff](CITATION.cff).
+Die Versions-DOI bezeichnet den am 20.10.2026 archivierten Stand. Die laufende Webseite und das Repository können spätere Änderungen enthalten. Für die Ressource über alle Versionen hinweg steht die [versionsübergreifende DOI](https://doi.org/10.5281/zenodo.23400542) bereit. Maschinenlesbare Zitierangaben: [CITATION.cff](CITATION.cff).
 
 ## Wie ist die Ressource entstanden?
 

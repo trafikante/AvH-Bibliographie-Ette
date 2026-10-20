@@ -75,6 +75,8 @@ Der Bearbeiter veröffentlichte die Ressource auf GitHub und GitHub Pages und ve
 
 Der [Zenodo-Eintrag](https://doi.org/10.5281/zenodo.23400543) wurde über die öffentliche API kontrolliert: Version `v1.0.2`, Publikationsdatum 15.10.2026, Dataset, beide Bearbeiter samt Kennungen und CC BY 4.0. Die DOI `10.5281/zenodo.23400543` bezeichnet diese konkrete Fassung; `10.5281/zenodo.23400542` ist die versionsübergreifende DOI. Eine spätere Änderung im GitHub-Repository aktualisiert das archivierte Release nicht automatisch.
 
+Am 20.10.2026 wurde das GitHub-Release `v1.1.0` automatisch auf Zenodo archiviert. Der [neue Zenodo-Eintrag](https://doi.org/10.5281/zenodo.23501331) wurde über die öffentliche API geprüft: Version `v1.1.0`, Publikationsdatum 20.10.2026, Dataset, beide Bearbeiter mit ORCID/GND und CC BY 4.0. Die versionsübergreifende DOI bleibt `10.5281/zenodo.23400542`. Die aktuellen Zitierangaben in README, `CITATION.cff` und HTML verweisen auf v1.1.0; ihre nachträgliche Aktualisierung im laufenden Repository verändert das bereits archivierte ZIP nicht.
+
 README und HTML-Webansicht verweisen auf die archivierte Fassung. `CITATION.cff` stellt die Zitierangaben einschließlich ORCID für GitHubs Zitierfunktion bereit; GND-Kennungen stehen in `.zenodo.json`. Sind beide Dateien vorhanden, übernimmt Zenodo die Metadaten aus [`.zenodo.json`](https://help.zenodo.org/docs/github/describe-software/zenodo-json/). Für ein künftiges Release müssen Zitierangaben und Versionsbezüge erneut geprüft werden. Die hier ergänzten DOI-Hinweise und die folgende aktualisierte Tokenauswertung sind Nacharbeiten am laufenden Repository, noch keine nachträgliche Änderung des archivierten Releases.
 
 ## Modelle und dokumentierter Tokenumfang

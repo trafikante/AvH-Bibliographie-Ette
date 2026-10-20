@@ -9,9 +9,9 @@
   ],
   "repository_url": "https://github.com/trafikante/AvH-Bibliographie-Ette",
   "zenodo": {
-    "doi": "10.5281/zenodo.23400543",
+    "doi": "10.5281/zenodo.23501331",
     "concept_doi": "10.5281/zenodo.23400542",
-    "version": "v1.0.2",
-    "publication_date": "2026-10-15"
+    "version": "v1.1.0",
+    "publication_date": "2026-10-20"
   }
 }
