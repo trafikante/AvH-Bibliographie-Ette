@@ -40,7 +40,7 @@ header{position:relative;background:linear-gradient(125deg,#e9efe5 0%,#f7f6f1 78
 '''
 
 CSS += '''
-body{font-size:17px}h1,.index-links a,.selection-content{overflow-wrap:anywhere}.entry-meta,.entry-actions,.bulk-downloads,.hint,.status{font-size:.9rem}footer{font-size:.9rem}.download{min-height:36px;padding:6px 10px}.section-heading{flex-wrap:wrap}.index-year{margin-right:.5em}.direct-files{padding:14px;border:2px solid var(--accent);border-radius:6px;background:var(--pale)}.direct-files ul{padding-left:1.4em}.direct-files li{margin:8px 0}.skip{top:auto;transform:translateY(-200%)}.skip:focus{top:8px;transform:none}
+body{font-size:17px}h1,.index-links a,.selection-content,#zitierhinweis{overflow-wrap:anywhere}.entry-meta,.entry-actions,.bulk-downloads,.hint,.status{font-size:.9rem}footer{font-size:.9rem}.download{min-height:36px;padding:6px 10px}.section-heading{flex-wrap:wrap}.index-year{margin-right:.5em}.direct-files{padding:14px;border:2px solid var(--accent);border-radius:6px;background:var(--pale)}.direct-files ul{padding-left:1.4em}.direct-files li{margin:8px 0}.skip{top:auto;transform:translateY(-200%)}.skip:focus{top:8px;transform:none}
 .section-heading{overflow-wrap:anywhere}.category-list a>span:not(.count){min-width:0;overflow-wrap:anywhere}
 @media(pointer:coarse){a.download,.header-actions a,summary{min-height:44px;display:inline-flex;align-items:center}.entry-actions{gap:12px}.direct-files a{display:inline-block;padding:8px 0}}
 @media print{.direct-files{display:none}}
@@ -51,6 +51,89 @@ CSS += '''
 .selection-content{border-left:0;background:#fff;border:1px solid var(--line);border-radius:7px;padding:18px 22px;line-height:1.75;max-width:72ch}.selection-content h2{font-size:1.05rem;margin:0 0 12px;color:var(--accent)}.selection-content h2:not(:first-child){margin-top:24px;padding-top:16px;border-top:1px solid var(--line)}.selection-content p{margin:10px 0}.selection-rules{margin:16px 0}.selection-rules dt{font-weight:650;margin-top:16px;overflow-wrap:anywhere}.selection-rules dd{margin:5px 0 12px;padding-left:14px;border-left:2px solid var(--line)}.footer-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:30px}.footer-grid>*{min-width:0}.footer-grid h2{font-size:1rem;color:var(--ink);margin:0 0 14px}.footer-grid ul{list-style:none;padding:0;margin:8px 0}.footer-grid li{margin:8px 0}.footer-grid p{margin:8px 0}.footer-grid a{overflow-wrap:anywhere}.github-link{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-weight:600}.github-mark{width:22px;height:22px;flex-shrink:0;fill:var(--ink)}
 @media(max-width:700px){.footer-grid{grid-template-columns:1fr;gap:22px}.footer-grid>*+*{border-top:1px solid var(--line);padding-top:18px}.selection-content{padding:16px}}
 @media print{.footer-grid{display:block}.footer-grid>*{margin-top:14px}}
+'''
+
+
+SEARCH_CSS = r'''
+[hidden]{display:none!important}
+.search-panel{position:sticky;top:0;z-index:5;background:#f7f6f1f5;border:1px solid #9fb6a5;border-top:4px solid var(--accent);border-radius:7px;padding:16px 20px;margin-bottom:28px;box-shadow:0 3px 12px #20363312;scroll-margin-top:12px}
+.search-panel label{display:block;font-weight:650;margin-bottom:8px}.search-row{display:flex;gap:10px}.search-row input{min-width:0;flex:1;font:inherit;border:1px solid #7e9586;border-radius:5px;padding:10px 12px;background:white;color:var(--ink)}.search-row button{font:inherit;font-size:.9rem;padding:10px 14px;border:1px solid var(--accent);border-radius:5px;background:white;color:var(--accent);cursor:pointer;min-height:44px}.search-row button:disabled{opacity:.5;cursor:default}.search-panel :focus-visible{outline:3px solid #b87516;outline-offset:3px}.search-panel p{margin:8px 0 0;font-size:.85rem}.search-panel .search-status{font-weight:650;color:var(--accent)}.search-empty{padding:24px;border:1px solid var(--line);background:white;border-radius:7px;margin-bottom:28px}
+@media(max-width:600px){.search-panel{padding:12px;position:static}.search-row{flex-wrap:wrap}.search-row input{flex-basis:100%;width:100%}.search-row button{padding:8px 12px}}
+@media print{.search-panel{display:none}}
+
+.search-filters{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}.search-filters>div{min-width:0}.search-filters label{font-size:.85rem;margin-bottom:5px}.search-filters select{width:100%;min-height:44px;font:inherit;font-size:.9rem;background:white;color:var(--ink);border:1px solid #7e9586;border-radius:5px;padding:8px}
+@media(max-width:600px){.search-filters{grid-template-columns:1fr;gap:10px}}
+'''
+
+SEARCH_FORM = '''<section class="search-panel" id="suche" aria-label="Bibliographie durchsuchen" hidden>
+<form role="search" id="search-form"><label for="search-input">Bibliographie durchsuchen</label><div class="search-row"><input id="search-input" type="search" placeholder="Zum Beispiel: Weltbewusstsein oder Humboldt 2024" autocomplete="off" aria-describedby="search-help"><button type="button" id="search-reset" disabled>Zurücksetzen</button></div><div class="search-filters"><div><label for="search-field">Suchen in</label><select id="search-field"><option value="all">Gesamte Literaturangabe</option><option value="title">Publikationstitel</option><option value="publisher">Verlag</option></select></div><div><label for="search-category">Kategorie</label><select id="search-category"><option value="">Alle Kategorien</option>__CATEGORIES__</select></div></div></form>
+<p id="search-help">Suchbereich und Kategorie sind kombinierbar. Mehrere Wörter müssen alle vorkommen; Großschreibung, Akzente und ß/ss spielen keine Rolle.</p>
+<p class="search-status" id="search-status" role="status" aria-live="polite" aria-atomic="true"></p><p id="search-active" hidden>Auswahl aktiv · Links in der Navigation und den Registern setzen die Suche zurück.</p>
+</section><div class="search-empty" id="search-empty" hidden><strong>Keine passenden Einträge.</strong><p>Versuche einen kürzeren Suchbegriff oder setze die Suche zurück.</p></div>
+'''
+
+SEARCH_SCRIPT = r'''
+(() => {
+  const input = document.getElementById('search-input');
+  const field = document.getElementById('search-field');
+  const category = document.getElementById('search-category');
+  const metadata = __METADATA__;
+  const reset = document.getElementById('search-reset');
+  const status = document.getElementById('search-status');
+  const normalize = text => text.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLocaleLowerCase('de').replace(/ß/g, 'ss');
+  const entries = [...document.querySelectorAll('article')].map(element => ({element, category: metadata[element.id].category, fields: {all: normalize(element.querySelector('.citation').textContent), title: normalize(metadata[element.id].title), publisher: normalize(metadata[element.id].publisher)}}));
+  const sections = [...document.querySelectorAll('.category-section')];
+  const counts = new Map(sections.map(section => [section, section.querySelector('.section-heading .count').textContent]));
+  const update = () => {
+    const words = normalize(input.value).trim().split(/\s+/).filter(Boolean);
+    const active = words.length > 0 || category.value !== '' || field.value !== 'all';
+    let found = 0;
+    for (const entry of entries) {
+      entry.element.hidden = (category.value !== '' && entry.category !== category.value) || !words.every(word => entry.fields[field.value].includes(word));
+      if (!entry.element.hidden) found++;
+    }
+    for (const section of sections) {
+      const visible = [...section.querySelectorAll('article')].filter(article => !article.hidden).length;
+      section.hidden = visible === 0;
+      section.querySelector('.section-heading .count').textContent = active ? visible + ' Treffer' : counts.get(section);
+      for (const download of section.querySelectorAll('.bulk-downloads')) download.hidden = active;
+      for (const heading of section.querySelectorAll('.subheading')) {
+        let sibling = heading.nextElementSibling;
+        let hasResult = false;
+        while (sibling && !sibling.classList.contains('subheading')) {
+          if (sibling.matches('article') && !sibling.hidden) hasResult = true;
+          sibling = sibling.nextElementSibling;
+        }
+        heading.hidden = !hasResult;
+      }
+    }
+    reset.disabled = !input.value && !active;
+    document.getElementById('search-active').hidden = !active;
+    document.getElementById('search-empty').hidden = found > 0;
+    status.textContent = active ? found + ' von ' + entries.length + ' Einträgen gefunden' : 'Alle ' + entries.length + ' Einträge';
+  };
+  const clear = () => { input.value = ''; field.value = 'all'; category.value = ''; update(); };
+  field.addEventListener('change', update);
+  category.addEventListener('change', update);
+  input.addEventListener('input', update);
+  input.addEventListener('keydown', event => { if (event.key === 'Escape') { clear(); } });
+  reset.addEventListener('click', () => { clear(); input.focus(); });
+  document.getElementById('search-form').addEventListener('submit', event => { event.preventDefault(); update(); input.blur(); });
+  document.addEventListener('click', event => {
+    const link = event.target.closest('a[href^="#"]');
+    if (!link) return;
+    const id = decodeURIComponent(link.getAttribute('href').slice(1));
+    const target = document.getElementById(id);
+    if (!target) return;
+    if (id !== 'suche' && id !== 'seitenanfang') clear();
+    for (let parent = target; parent; parent = parent.parentElement) {
+      if (parent.tagName === 'DETAILS') parent.open = true;
+    }
+  });
+  document.getElementById('search-link').hidden = false;
+  document.getElementById('suche').hidden = false;
+  update();
+})();
 '''
 
 
@@ -211,6 +294,13 @@ def bulk_downloads(records, group, category_labels, subgroup_labels):
 
 
 def build_page(dataset):
+    search_options = ''.join('<option value="' + escape(category['id']) + '">' + escape(category['label']) + '</option>' for category in dataset['categories'])
+    search_form = SEARCH_FORM.replace('__CATEGORIES__', search_options)
+    search_metadata = {record['id']: {'title': record['bibliographic'].get('title', ''),
+                                     'publisher': record['bibliographic'].get('publisher') or '',
+                                     'category': record['category_id']} for record in dataset['records']}
+    # Escape less-than signs so a title cannot terminate the inline script element.
+    search_script = SEARCH_SCRIPT.replace('__METADATA__', json.dumps(search_metadata, ensure_ascii=False).replace('<', '\\u003c'))
     config = json.loads((PROJECT / 'data/web-konfiguration.json').read_text(encoding='utf-8'))
     title = config['title']
     principles = config['selection_principles']
@@ -249,7 +339,7 @@ def build_page(dataset):
     years = sorted({record['publication_year'] for record in records}, reverse=True)
     languages_nav = ''.join('<li><a href="#sprache-' + code + '">' + LANGUAGES[code] + '<span class="count">' + str(sum(code in record['languages'] for record in records)) + '</span></a></li>' for code in language_codes)
     years_nav = ''.join('<li><a href="#jahr-' + str(year) + '">' + str(year) + '<span class="count">' + str(sum(record['publication_year'] == year for record in records)) + '</span></a></li>' for year in years)
-    navigation = '<aside class="navigation" id="navigation"><nav aria-label="Bibliographie erschließen"><h2>Navigation</h2><ul class="category-list">' + ''.join(category_nav) + '</ul><details open><summary>Sprachen</summary><ul class="register-list">' + languages_nav + '</ul></details><details><summary>Jahre</summary><ul class="register-list">' + years_nav + '</ul></details><p class="hint">Register öffnen und einen Titel wählen. Volltextsuche: Strg+F, am Mac ⌘F. Die Register ersetzen keine kombinierbaren Filter.</p><p><a href="#downloads">Datensets</a></p></nav></aside>'
+    navigation = '<aside class="navigation" id="navigation"><nav aria-label="Bibliographie erschließen"><h2>Navigation</h2><ul class="category-list">' + ''.join(category_nav) + '</ul><details open><summary>Sprachen</summary><ul class="register-list">' + languages_nav + '</ul></details><details><summary>Jahre</summary><ul class="register-list">' + years_nav + '</ul></details><p class="hint">Register öffnen und einen Titel wählen. Suchbereich und Kategorie sind im Suchfeld kombinierbar. Ohne JavaScript: Textsuche mit Strg+F, am Mac ⌘F.</p><p><a href="#downloads">Datensets</a></p></nav></aside>'
     sections = []
     for category in categories:
         content = []
@@ -287,9 +377,9 @@ def build_page(dataset):
     csv_content = (PROJECT / 'data/bibliographie.csv').read_text(encoding='utf-8-sig')
     downloads = '<section class="register-details" id="downloads"><h2>Gesamtdaten</h2><div class="download-group">' + download('CSL-JSON', 'bibliographie.csl.json', all_csl, 'application/json') + download('RIS', 'bibliographie.ris', all_ris, 'application/x-research-info-systems') + download('CSV', 'bibliographie.csv', '\ufeff' + csv_content, 'text/csv') + download('Projektdatensatz JSON', 'bibliographie.json', dataset_json, 'application/json') + '</div><p class="hint">RIS und CSL-JSON für Literaturverwaltung. Der Projektdatensatz bewahrt zusätzlich Kategorien und Quellenbezüge. RIS bildet komplexe Medienrollen und Seitenangaben teilweise als Notizen ab. Importe in Zotero, EndNote und Citavi sind noch nicht praktisch geprüft.</p></section>'
     header = '<header><p class="eyebrow">Alexander von Humboldt · Bibliographie</p><h1>' + escape(title) + '</h1><p class="intro">Zusammengestellt von Tobias Kraft und Ulrich Päßler (BBAW).</p><p class="status">262 Einträge · 7 Kategorien · Stand 13.10.2026</p>' + selection
-    header += '<div class="header-actions"><a href="#bibliographie">Zur Bibliographie ↓</a><a href="#sprachregister">Sprachen</a><a href="#jahresregister">Jahre</a><a href="#downloads">Datensets</a><a href="#zitierhinweis">Zitierhinweis</a></div>'
+    header += '<div class="header-actions"><a id="search-link" href="#suche" hidden>Bibliographie durchsuchen</a><a href="#bibliographie">Zur Bibliographie ↓</a><a href="#sprachregister">Sprachen</a><a href="#jahresregister">Jahre</a><a href="#downloads">Datensets</a><a href="#zitierhinweis">Zitierhinweis</a></div>'
     header += '<p class="publication">Die Bibliographie wurde parallel als Teil der Sondernummer der <em>HiN</em> zum 70. Geburtstag von Ottmar Ette im Dezember 2026 online veröffentlicht (<a href="https://www.hin-online.de/">www.hin-online.de</a>). Die zugehörigen <a href="#downloads">Datensets</a> stehen in verschiedenen Formaten zum Herunterladen bereit.</p>'
-    header += '<p class="hint">Offline nutzbar, ohne JavaScript. Eingebettete Downloads können auf Smartphones eingeschränkt sein; dafür stehen im Abschnitt „Datensets“ direkte Dateilinks und ein ZIP-Paket bereit.</p></header>'
+    header += '<p class="hint">Offline nutzbar. Die Suche ergänzt die Bibliographie bei aktiviertem JavaScript. Eingebettete Downloads können auf Smartphones eingeschränkt sein; dafür stehen im Abschnitt „Datensets“ direkte Dateilinks und ein ZIP-Paket bereit.</p></header>'
     footer_navigation = '<nav aria-label="Navigation im Seitenfuß"><h2>Bibliographie</h2><ul><li><a href="#seitenanfang">Zurück zur Navigation ↑</a></li><li><a href="#sprachregister">Sprachregister</a></li><li><a href="#jahresregister">Jahresregister</a></li><li><a href="#weitere-ausgaben">Weitere Ausgaben</a></li><li><a href="#downloads">Datensets</a></li></ul></nav>'
     footer_project = '<section><h2>Projekt und Dokumentation</h2><a class="github-link" href="' + escape(repository) + '">' + github_mark() + '<span>GitHub-Repository</span></a><ul><li><a href="' + escape(repository + '/blob/main/ERSTELLUNG-UND-NACHNUTZUNG.md') + '">Entstehung und Zusammenarbeit</a></li><li><a href="' + escape(repository + '/blob/main/DATENMODELL.md') + '">Datenmodell und Erfassungsregeln</a></li><li><a href="' + escape(repository + '/tree/main/data') + '">Rohdatensatz</a></li></ul></section>'
     footer_project = footer_project.replace('</ul>', '<li><a href="' + escape(doi_url) + '">Zenodo: archivierte Version ' + escape(zenodo['version']) + '</a></li><li><a href="' + escape(repository + '/blob/main/CITATION.cff') + '">Zitierangaben</a></li></ul>')
@@ -299,7 +389,7 @@ def build_page(dataset):
     downloads = downloads.replace('<div class="download-group">', direct_files + '<h3>Eingebettete Offline-Downloads</h3><div class="download-group">', 1)
     downloads = downloads.replace('Importe in Zotero, EndNote und Citavi sind noch nicht praktisch geprüft.', 'Der Bearbeiter hat RIS-Importe in Zotero und Citavi geprüft; abgesehen von der inzwischen korrigierten Notizaufteilung wurden dabei keine Fehler beobachtet. EndNote wurde nicht getestet.')
     downloads = downloads.replace('<h2>Gesamtdaten</h2>', '<h2>Datensets</h2>')
-    return '<!doctype html>\n<html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Bibliographie der Publikationen von Ottmar Ette zu Alexander von Humboldt mit Kategorien-, Sprach- und Jahresregistern sowie RIS- und CSL-JSON-Export."><title>' + escape(title) + '</title><style>' + CSS + '</style></head><body id="seitenanfang" tabindex="-1"><a class="skip" href="#bibliographie">Zur Bibliographie</a>' + header + '<div class="layout">' + navigation + '<main id="bibliographie" tabindex="-1">' + ''.join(sections) + registers + downloads + citation + '</main></div>' + footer + '</body></html>\n'
+    return '<!doctype html>\n<html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Bibliographie der Publikationen von Ottmar Ette zu Alexander von Humboldt mit Kategorien-, Sprach- und Jahresregistern sowie RIS- und CSL-JSON-Export."><title>' + escape(title) + '</title><style>' + CSS + SEARCH_CSS + '</style></head><body id="seitenanfang" tabindex="-1"><a class="skip" href="#bibliographie">Zur Bibliographie</a>' + header + '<div class="layout">' + navigation + '<main id="bibliographie" tabindex="-1">' + search_form + ''.join(sections) + registers + downloads + citation + '</main></div>' + footer + '<script>' + search_script + '</script></body></html>\n'
 
 
 def validate(page, dataset):
@@ -315,7 +405,16 @@ def validate(page, dataset):
     assert not tree.xpath('//article[@aria-labelledby]')
     assert len(tree.xpath('//footer//div[@class="footer-grid"]/*')) == 3
     assert len(tree.xpath('//footer//svg[@class="github-mark"]')) == 1
-    assert not tree.xpath('//script|//iframe|//link[@rel="stylesheet"]|//img|//audio|//video')
+    assert not tree.xpath('//script[@src]|//iframe|//link[@rel="stylesheet"]|//img|//audio|//video')
+    assert len(tree.xpath('//script')) == 1
+    assert tree.get_element_by_id('suche').get('hidden') is not None
+    assert tree.get_element_by_id('search-link').get('hidden') is not None
+    assert tree.get_element_by_id('search-field').xpath('./option/@value') == ['all', 'title', 'publisher']
+    assert tree.get_element_by_id('search-category').xpath('./option/@value') == [''] + [category['id'] for category in dataset['categories']]
+    search_metadata = json.loads(re.search(r'  const metadata = (.*);', tree.xpath('//script')[0].text).group(1))
+    assert search_metadata == {record['id']: {'title': record['bibliographic'].get('title', ''),
+                                            'publisher': record['bibliographic'].get('publisher') or '',
+                                            'category': record['category_id']} for record in dataset['records']}
     assert not re.search(r'\son\w+\s*=', page, re.I)
     assert not re.search(r'@import|url\(', CSS)
     records = dataset['records']
@@ -372,7 +471,7 @@ def validate(page, dataset):
         assert group_payloads[group + '.ris'] == ''.join(ris_record(record, category_labels, subgroup_labels) for record in expected_records)
     return {'records': len(records), 'single_exports': len(records) * 2, 'complete_exports': len(downloads),
             'bulk_groups': len(group_elements), 'bulk_exports': len(group_elements) * 2,
-            'javascript': False, 'external_assets': False, 'source_text_preserved': True,
+            'javascript': True, 'external_assets': False, 'source_text_preserved': True,
             'internal_links_valid': True, 'download_payloads_checked': True, 'language_registers_chronological': True, 'single_ris_note': True, 'bytes_utf8': len(page.encode('utf-8'))}
 
 

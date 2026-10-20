@@ -2,6 +2,7 @@
 
 ## Inhalt
 
+- [Lokale Suche vom 20.10.2026](#lokale-suche-vom-20102026)
 - [Gültiger Publikationsstand vom 15.10.2026](#gültiger-publikationsstand-vom-15102026)
 - [Vollständige Offline-Webansicht](#vollständige-offline-webansicht)
 - [Bestätigte redaktionelle Festlegungen](#bestätigte-redaktionelle-festlegungen)
@@ -12,6 +13,14 @@
 - [Technische Prüfungen](#technische-prüfungen)
 - [Noch fachlich zu prüfen](#noch-fachlich-zu-prüfen)
 - [GitHub](#github)
+
+## Lokale Suche vom 20.10.2026
+
+Nach Nutzerprüfung der separaten Suchprobe in den regulären HTML-Generator übernommen: kombinierbare Suche in vollständigen Literaturangaben, Publikationstiteln oder Verlagen und Filter nach Hauptkategorie. Suchnormalisierung für Groß-/Kleinschreibung, Akzente und ß/ss; keine Lemmatisierung. Vollständige Offline-Nutzung ohne externe Suchdienste; ohne JavaScript bleiben sämtliche Einträge, Register und Downloads erhalten.
+
+Lokaler Browsercheck in Edge: `Insel` ergibt 17 Treffer insgesamt, 6 im Titel, 4 bei Titel + Aufsätze und 9 im Verlag. Mehrwortsuche, reine Kategorieauswahl, Schreibvarianten, keine Treffer, Zurücksetzen, Escape und Registerwechsel geprüft. Darstellung bei 390 und 325 CSS-Pixeln ohne horizontalen Überlauf; DOI-Umbruch im Zitierhinweis ausschließlich per CSS, ohne Änderung der Linkadresse. Keine externen Netzabrufe durch die Suche. Ein echter Smartphone- oder Screenreader-Test ist damit nicht abgedeckt.
+
+Generatorprüfung vergleicht den eingebetteten Suchindex mit Titel-, Verlags- und Kategoriefeldern des Datensatzes. Quellenabsätze, interne Sprungziele und Exportinhalte weiterhin geprüft. `data/web-pruefung.json` weist nun `javascript: true` und weiterhin `external_assets: false` aus. Bibliographische Daten und Exporte unverändert. Die nachfolgenden Abschnitte dokumentieren frühere Prüfstände; ihre Aussagen zu einer JavaScript-freien Seite gelten für den damaligen Stand.
 
 ## Gültiger Publikationsstand vom 15.10.2026
 

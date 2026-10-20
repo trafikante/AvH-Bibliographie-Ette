@@ -4,7 +4,7 @@
 
 Zusammengestellt von Tobias Kraft und Ulrich Päßler (BBAW). Das Schriftenverzeichnis umfasst **262 Einträge**: wissenschaftliche und literarische Publikationen, Internet-Präsentationen, Beiträge zur Wissenschaftskommunikation und Übersetzungen.
 
-Die Webseite bietet Kategorien-, Sprach- und Jahresregister sowie Downloads als **RIS und CSL-JSON** – für einzelne Einträge, ganze Kategorien, Sprachen, Jahre oder die gesamte Bibliographie. Sie funktioniert ohne JavaScript und lässt sich als [HTML-Datei](index.html) auch offline nutzen. Die Register sind keine frei kombinierbaren Suchfilter.
+Die Webseite bietet eine **Suche mit kombinierbarem Suchbereich und Kategoriefilter**, Kategorien-, Sprach- und Jahresregister sowie Downloads als **RIS und CSL-JSON** – für einzelne Einträge, ganze Kategorien, Sprachen, Jahre oder die gesamte Bibliographie. Die Suche durchsucht wahlweise die gesamte Literaturangabe, den Publikationstitel oder den Verlag. Sie läuft mit eingebettetem JavaScript auch offline. Ohne JavaScript bleiben alle Einträge, Register und Downloads nutzbar. Die [HTML-Datei](index.html) lässt sich einzeln offline öffnen; [Hinweise zur Suche](WEB-NUTZUNG.md#suche).
 
 ## Daten herunterladen
 

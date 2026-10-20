@@ -10,7 +10,7 @@
 - [6. Später pflegen – Desktop und VS Code kombinieren](#6-später-pflegen--desktop-und-vs-code-kombinieren)
 - [7. Optional: eine zitierbare Version markieren](#7-optional-eine-zitierbare-version-markieren)
 
-Diese Anleitung veröffentlicht das vorhandene Projekt als öffentliches Repository **AvH-Bibliographie-Ette** und stellt die fertige HTML-Datei als Webseite bereit. Sie benötigt weder Python noch eine JavaScript-Anwendung. Es wurden hier keine Git-Operationen und keine Uploads ausgeführt.
+Diese Anleitung veröffentlicht das vorhandene Projekt als öffentliches Repository **AvH-Bibliographie-Ette** und stellt die fertige HTML-Datei als Webseite bereit. Für die Bereitstellung sind weder Python noch eine serverseitige Anwendung oder ein JavaScript-Build erforderlich. Die fertige HTML-Datei enthält das JavaScript für die optionale lokale Suche bereits; Lesen, Register und Downloads funktionieren auch ohne JavaScript. Es wurden hier keine Git-Operationen und keine Uploads ausgeführt.
 
 ## 1. Was du veröffentlichst
 
