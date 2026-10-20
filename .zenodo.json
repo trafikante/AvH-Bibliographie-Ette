@@ -1,6 +1,7 @@
 {
   "title": "Schriftenverzeichnis: Publikationen von Ottmar Ette zu Alexander von Humboldt",
   "upload_type": "dataset",
+  "version": "v1.1.0",
 "creators": [
   {
     "name": "Kraft, Tobias",
@@ -15,7 +16,7 @@
     "gnd": "139028285"
   }
 ],
-  "description": "Bibliographischer Datensatz mit 262 Einträgen zu den Publikationen von Ottmar Ette über Alexander von Humboldt. Enthalten sind strukturierte Daten in JSON und CSV, Exporte in RIS und CSL-JSON, eine offlinefähige HTML-Webansicht mit Kategorien-, Sprach- und Jahresregistern sowie Dokumentation und Erzeugungsskripte. Daten und redaktionelle Inhalte stehen unter CC BY 4.0, der Programmcode unter MIT; die genaue Zuordnung erläutert LIZENZ.md.",
+  "description": "Bibliographischer Datensatz mit 262 Einträgen zu den Publikationen von Ottmar Ette über Alexander von Humboldt. Enthalten sind strukturierte Daten in JSON und CSV, Exporte in RIS und CSL-JSON, eine offlinefähige HTML-Webansicht mit Kategorien-, Sprach- und Jahresregistern, einer lokalen Suche in Literaturangaben, Titeln oder Verlagen mit kombinierbarem Kategoriefilter sowie Dokumentation und Erzeugungsskripte. Die Suche verwendet eingebettetes JavaScript; ohne JavaScript bleiben sämtliche Einträge, Register und Downloads nutzbar. Daten und redaktionelle Inhalte stehen unter CC BY 4.0, der Programmcode unter MIT; die genaue Zuordnung erläutert LIZENZ.md.",
   "access_right": "open",
   "license": "cc-by-4.0",
   "keywords": [
